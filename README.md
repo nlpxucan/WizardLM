@@ -107,14 +107,14 @@ deepspeed train_freeform.py \
 ```
 ### Evaluation
 
-To evaluate Wizard, we conduct human evaluation on the inputs from the human instruct evaluation set [`WizardLM_testset.jsonl`](./data/WizardLM_testset.jsonl) . This evaluation set was collected by the authors and covers a diverse list of user-oriented instructions including email writing, social media, formula, code, table and productivity tools. We performed a blind pairwise comparison between Wizard and baselines. Specifically, we randomly sample 218 examples from test set, and recruit 10 well-educated annotators to rank the models from 1 to 5 on relevance, knowledgeable, reasoning, calculation and accuracy. 
+To evaluate Wizard, we conduct human evaluation on the inputs from our human instruct evaluation set [`WizardLM_testset.jsonl`](./data/WizardLM_testset.jsonl) . This evaluation set was collected by the authors and covers a diverse list of user-oriented instructions including difficult Coding Generation & Debugging, Math, Reasoning, Complex Formats, Academic Writing, Extensive Disciplines, and so on. We performed a blind pairwise comparison between Wizard and baselines. Specifically, we recruit 10 well-educated annotators to rank the models from 1 to 5 on relevance, knowledgeable, reasoning, calculation and accuracy. 
 
-Wizard achieved significantly better results than Alpaca and Vicuna-7b. 
+WizardLM achieved significantly better results than Alpaca and Vicuna-7b. 
 <p align="center" width="60%">
 <a ><img src="imgs/win.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
-In the high-difficulty section of our test set (difficulty level >= 8), Wizard even outperforms ChatGPT, with a win rate 7.9% larger than Chatgpt (42.9% vs. 35.0%). This indicates that our method can significantly improve the ability of large language models to handle complex instructions.
+In the high-difficulty section of our test set (difficulty level >= 8), WizardLM even outperforms ChatGPT, with a win rate 7.9% larger than Chatgpt (42.9% vs. 35.0%). This indicates that our method can significantly improve the ability of large language models to handle complex instructions.
 <p align="center" width="60%">
 <a ><img src="imgs/windiff.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
