@@ -38,6 +38,14 @@ Evol-Instruct is a novel method using LLMs instead of humans to automatically ma
 
 8. [Disclaimer](#disclaimer)
 
+## Online Demo
+
+We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many real-world and challenging problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
+
+[Demo Link]()
+
+[Demo Backup]()
+
 ## Training Data
 
 [`alpaca_evol_instruct_70k.json`](./alpaca_evol_instruct_70k.json) contains 70K instruction-following data generated from Evol-Instruct. We used it for fine-tuning the WizardLM model.
