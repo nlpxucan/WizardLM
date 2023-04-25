@@ -78,7 +78,7 @@ python3 -m fastchat.model.apply_delta \
 
 ## Fine-tuning
 
-We fine-tune WizardLM using code from this [repo](https://github.com/AetherCortex/Llama-X).
+We fine-tune WizardLM using code from [L](https://github.com/AetherCortex/Llama-X).
 We fine-tune LLaMA-7B with the following hyperparameters:
 
 | Hyperparameter | LLaMA-7B |
