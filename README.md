@@ -78,7 +78,7 @@ python3 -m fastchat.model.apply_delta \
 
 ## Fine-tuning
 
-We fine-tune WizardLM using code from [L](https://github.com/AetherCortex/Llama-X).
+We fine-tune WizardLM using code from [Llama-X](https://github.com/AetherCortex/Llama-X).
 We fine-tune LLaMA-7B with the following hyperparameters:
 
 | Hyperparameter | LLaMA-7B |
@@ -91,7 +91,7 @@ We fine-tune LLaMA-7B with the following hyperparameters:
 | LR scheduler   | cosine   |
 
 To reproduce our fine-tuning of WizardLM, please follow the following steps:
-1. According to the instructions of this [repo](https://github.com/AetherCortex/Llama-X), install the environment, download the training code, and deploy.
+1. According to the instructions of [Llama-X](https://github.com/AetherCortex/Llama-X), install the environment, download the training code, and deploy.
 2. Replace the train.py with the train_freeform.py in our repo(src/train_freeform.py)
 3. Execute the following training command:
 ```bash
