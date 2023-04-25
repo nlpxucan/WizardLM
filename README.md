@@ -107,7 +107,7 @@ deepspeed train_freeform.py \
 ```
 ### Evaluation
 
-To evaluate Wizard, we conduct human evaluation on the inputs from the human instruct evaluation set. This evaluation set was collected by the authors and covers a diverse list of user-oriented instructions including email writing, social media, formula, code, table and productivity tools. We performed a blind pairwise comparison between Wizard and baselines. Specifically, we randomly sample 218 examples from test set, and recruit 10 well-educated annotators to rank the models from 1 to 5 on relevance, knowledgeable, reasoning, calculation and accuracy. 
+To evaluate Wizard, we conduct human evaluation on the inputs from the human instruct evaluation set [`WizardLM_testset.jsonl`](./data/WizardLM_testset.jsonl) . This evaluation set was collected by the authors and covers a diverse list of user-oriented instructions including email writing, social media, formula, code, table and productivity tools. We performed a blind pairwise comparison between Wizard and baselines. Specifically, we randomly sample 218 examples from test set, and recruit 10 well-educated annotators to rank the models from 1 to 5 on relevance, knowledgeable, reasoning, calculation and accuracy. 
 
 Wizard achieved significantly better results than Alpaca and Vicuna-7b. 
 <p align="center" width="60%">
