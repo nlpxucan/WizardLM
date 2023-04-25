@@ -105,6 +105,17 @@ deepspeed train_freeform.py \
     --deepspeed configs/deepspeed_config.json \
     --fp16 True
 ```
+
+## Inference
+
+We provide the decoding script for WizardLM, which reads a input file and generates corresponding responses for each sample, and finally consolidates them into an output file.
+
+You can specify `base_model`, `input_data_path` and `output_data_path` in src\inference_wizardlm.py to set the decoding model, path of input file and path of output file.
+The decoding command:
+```
+python src\inference_wizardlm.py
+```
+
 ### Evaluation
 
 To evaluate Wizard, we conduct human evaluation on the inputs from our human instruct evaluation set [`WizardLM_testset.jsonl`](./data/WizardLM_testset.jsonl) . This evaluation set was collected by the authors and covers a diverse list of user-oriented instructions including difficult Coding Generation & Debugging, Math, Reasoning, Complex Formats, Academic Writing, Extensive Disciplines, and so on. We performed a blind pairwise comparison between Wizard and baselines. Specifically, we recruit 10 well-educated annotators to rank the models from 1 to 5 on relevance, knowledgeable, reasoning, calculation and accuracy. 
