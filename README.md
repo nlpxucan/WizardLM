@@ -38,7 +38,7 @@ Evol-Instruct is a novel method using LLMs instead of humans to automatically ma
 
 ## Training Data
 
-[`wizardlm_train_70k.json`](./wizardlm_train_70k.json) contains 70K instruction-following data generated from Evol-Instruct. We used it for fine-tuning the WizardLM model.
+[`alpaca_evol_instruct_70k.json`](./alpaca_evol_instruct_70k.json) contains 70K instruction-following data generated from Evol-Instruct. We used it for fine-tuning the WizardLM model.
 This JSON file is a list of dictionaries, each dictionary contains the following fields:
 
 - `instruction`: `str`, describes the task the model should perform. Each of the 70K instructions is unique.
@@ -85,7 +85,7 @@ To reproduce our fine-tuning of WizardLM, please follow the following steps:
 ```bash
 deepspeed train_freeform.py \
     --model_name_or_path /path/to/llama-7B/hf \
-    --data_path /path/to/wizardlm_train_70k.json \
+    --data_path /path/to/alpaca_evol_instruct_70k.json \
     --output_dir /path/to/wizardlm-7B/hf/ft \
     --num_train_epochs 3 \
     --model_max_length 2048 \
