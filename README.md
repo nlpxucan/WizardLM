@@ -60,7 +60,7 @@ This JSON file is a list of dictionaries, each dictionary contains the following
 
 ## WizardLM Weights
 
-We will release [WizardLM] weights as delta weights to comply with the LLaMA model license before 4/28/2023, before that please refer to our above demo site to play with WizardLM.
+We will release [WizardLM] weights as delta weights to comply with the LLaMA model license before 4/28/2023 to wait for an internal review, before that please refer to our above demo site to play with WizardLM.
 
 
 ## Fine-tuning
