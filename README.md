@@ -14,7 +14,7 @@ Empowering Large Language Models to Follow Complex Instructions
 - 🔥 We released **WizardLM: Empowering Large Language Models to Follow Complex Instructions**. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo](https://0c6206741e130d343d.gradio.live/), [demo_bak](https://1fd2fef157807df9fe.gradio.live/).
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
-Note: We will provide our latest model for you to try for as long as possible. If you find a link is not working, please try another one. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
+Note: Please use demo and demo_bak as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
 ## Overview of Evol-Instruct
 
