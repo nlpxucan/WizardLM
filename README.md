@@ -76,22 +76,22 @@ We fine-tune LLaMA-7B with the following hyperparameters:
 
 To reproduce our fine-tuning of WizardLM, please follow the following steps:
 1. According to the instructions of this [repo](https://github.com/AetherCortex/Llama-X), install the environment, download the training code, and deploy.
-2. Replace the train.py with the train.py in our repo(src/train.py)
+2. Replace the train.py with the train_freeform.py in our repo(src/train_freeform.py)
 3. Execute the following training command:
 ```bash
-deepspeed train.py \
+deepspeed train_freeform.py \
     --model_name_or_path /path/to/llama-7B/hf \
-    --data_path /path/to/example_data.json \
-    --output_dir /path/to/llama-7B/hf/ft \
+    --data_path /path/to/wizardlm_train_70k.json \
+    --output_dir /path/to/wizardlm-7B/hf/ft \
     --num_train_epochs 3 \
-    --model_max_length 512 \
-    --per_device_train_batch_size 64 \
+    --model_max_length 2048 \
+    --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 1 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
-    --save_steps 100 \
-    --save_total_limit 2 \
+    --save_steps 800 \
+    --save_total_limit 3 \
     --learning_rate 2e-5 \
     --warmup_steps 2 \
     --logging_steps 2 \
