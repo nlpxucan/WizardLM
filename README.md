@@ -109,13 +109,13 @@ Wizard achieved significantly better results than Alpaca and Vicuna-7b.
 
 
 <p align="center" width="60%">
-<a ><img src="imgs/win.png" alt="WizardLM" style="width: 20%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/win.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 In the high-difficulty section of our test set (difficulty level >= 8), Wizard even outperforms ChatGPT, with a win rate 7.9% larger than Chatgpt (42.9% vs. 35.0%). This indicates that our method can significantly improve the ability of large language models to handle complex instructions.
 
 <p align="center" width="60%">
-<a ><img src="imgs/windiff.png" alt="WizardLM" style="width: 20%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/windiff.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ### Citation
