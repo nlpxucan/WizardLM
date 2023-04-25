@@ -46,6 +46,8 @@ We will provide our latest models for you to try for as long as possible. If you
 
 [Demo Backup]()
 
+Note: We only recommend using English to experience our model. Support for other languages will be introduced in the future.
+
 ## Training Data
 
 [`alpaca_evol_instruct_70k.json`](./alpaca_evol_instruct_70k.json) contains 70K instruction-following data generated from Evol-Instruct. We used it for fine-tuning the WizardLM model.
