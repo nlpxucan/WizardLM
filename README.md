@@ -42,9 +42,9 @@ Evol-Instruct is a novel method using LLMs instead of humans to automatically ma
 
 We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many real-world and challenging problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
 
-[Demo Link]()
+WizardLM-7B [Demo Link]()
 
-[Demo Backup]()
+WizardLM-7B [Demo Backup]()
 
 Note: We only recommend using English to experience our model. Support for other languages will be introduced in the future.
 
