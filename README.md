@@ -40,7 +40,7 @@ Evol-Instruct is a novel method using LLMs instead of humans to automatically ma
 
 ## Online Demo
 
-We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many real-world and challenging problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
+We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many **real-world** and **challenging** problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
 
 [Demo Link]()
 
