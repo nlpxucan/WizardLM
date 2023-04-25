@@ -48,7 +48,7 @@ We will provide our latest models for you to try for as long as possible. If you
 
 [Demo Backup](https://0c6206741e130d343d.gradio.live/)
 
-Note: We only recommend using English to experience our model. Support for other languages will be introduced in the future.
+Note: We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
 ## Training Data
 
