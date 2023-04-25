@@ -62,6 +62,15 @@ This JSON file is a list of dictionaries, each dictionary contains the following
 
 We will release [WizardLM] weights as delta weights to comply with the LLaMA model license before 4/28/2023 to wait for an internal review, before that please refer to our above demo site to play with WizardLM.
 
+## WizardLM Weights
+We release [WizardLM] weights as delta weights to comply with the LLaMA model license.
+You can add our delta to the original LLaMA weights to obtain the WizardLM weights. Instructions:
+1. Get the original LLaMA weights in the huggingface format by following the instructions [here](https://huggingface.co/docs/transformers/main/model_doc/llama).
+2. Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM) Use the following scripts to get WizardLM weights by applying our delta. 
+3. Run:
+```
+python weight_diff.py recover --path_raw <path_to_step_1_dir> --path_diff <path_to_step_2_dir> --path_tuned <path_to_store_recovered_weights>
+```
 
 ## Fine-tuning
 
