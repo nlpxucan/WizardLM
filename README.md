@@ -9,6 +9,11 @@ Empowering Large Language Models to Follow Complex Instructions
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
+## News
+
+- 🔥 We released **WizardLM: Empowering Large Language Models to Follow Complex Instructions**. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo](https://chat.lmsys.org/).
+- &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
+
 ## Overview of Evol-Instruct
 
 Evol-Instruct is a novel method using LLMs instead of humans to automatically mass-produce open-domain instructions of various difficulty levels and skills range, to improve the performance of LLMs.
@@ -16,25 +21,22 @@ Evol-Instruct is a novel method using LLMs instead of humans to automatically ma
 ## Comparison with ChatGPT under complex instructions
 
 ## Contents
-1. [News](#news)
 
-2. [Online Demo](#online-demo)
+1. [Online Demo](#online-demo)
 
-3. [Training Data](#train_data)
+2. [Training Data](#train_data)
 
-4. [WizardLM Weights](#wizardlm-weights)
+3. [WizardLM Weights](#wizardlm-weights)
 
-5. [Fine-tuning](#finetune)
+4. [Fine-tuning](#finetune)
 
-6. [Inference](#inference)
+5. [Inference](#inference)
 
-7. [Evaluation](#evaluation)
+6. [Evaluation](#evaluation)
 
-8. [Citation](#citation)
+7. [Citation](#citation)
 
-9. [Disclaimer](#disclaimer)
-
-## News
+8. [Disclaimer](#disclaimer)
 
 ## Training Data
 
