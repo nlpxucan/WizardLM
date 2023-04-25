@@ -69,7 +69,7 @@ You can add our delta to the original LLaMA weights to obtain the WizardLM weigh
 2. Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM) 
 3. Use the following scripts to get WizardLM weights by applying our delta:
 ```
-python weight_diff.py recover --path_raw <path_to_step_1_dir> --path_diff <path_to_step_2_dir> --path_tuned <path_to_store_recovered_weights>
+python src/weight_diff_wizard.py recover --path_raw <path_to_step_1_dir> --path_diff <path_to_step_2_dir> --path_tuned <path_to_store_recovered_weights>
 ```
 
 ## Fine-tuning
