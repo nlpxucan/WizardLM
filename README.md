@@ -1,6 +1,6 @@
 
 <p align="center" width="100%">
-<a ><img src="imgs/WizardLM.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/WizardLM.png" alt="WizardLM" style="width: 50%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 # WizardLM: Empowering Large Language Models to Follow Complex Instructions
