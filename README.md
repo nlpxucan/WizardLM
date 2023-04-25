@@ -62,25 +62,6 @@ This JSON file is a list of dictionaries, each dictionary contains the following
 
 We will release [WizardLM] weights as delta weights to comply with the LLaMA model license before 4/28/2023, before that please refer to our above demo site to play with WizardLM.
 
-<!-- You can add our delta to the original LLaMA weights to obtain the WizardLM weights.  -->
-<!-- 
-Instructions:
-
-1. Get the original LLaMA weights in the huggingface format by following the instructions [here](https://huggingface.co/docs/transformers/main/model_doc/llama).
-2. Please download our delta model at the following [link]() Use the following scripts to get WizardLM weights by applying our delta. They will automatically download delta weights from our Hugging Face [account](https://huggingface.co/lmsys).
-
-**NOTE**:
-Weights v1.1 are only compatible with ```transformers>=4.28.0```.
-
-### WizardLM-7B
-This conversion command needs around 30 GB of CPU RAM.
-See the "Low CPU Memory Conversion" section below if you do not have enough memory.
-```bash
-python3 -m fastchat.model.apply_delta \
-    --base-model-path /path/to/llama-7b \
-    --target-model-path /output/path/to/vicuna-7b \
-    --delta-path lmsys/vicuna-7b-delta-v1.1 -->
-``` -->
 
 ## Fine-tuning
 
