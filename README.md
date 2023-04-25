@@ -1,5 +1,5 @@
 # WizardLM: An Instruction-following LLM Using Evol-Instruct
-Empowering Large Language Models to Follow Complex Instructions
+Empowering Large Pre-trained Language Models to Follow Complex Instructions
 
 <p align="center" width="100%">
 <a ><img src="imgs/WizardLM.png" alt="WizardLM" style="width: 20%; min-width: 300px; display: block; margin: auto;"></a>
