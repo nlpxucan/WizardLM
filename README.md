@@ -34,6 +34,8 @@ Evol-Instruct is a novel method using LLMs instead of humans to automatically ma
 
 9. [Disclaimer](#disclaimer)
 
+## News
+
 ## Training Data
 
 [`wizardlm_train_70k.json`](./wizardlm_train_70k.json) contains 70K instruction-following data generated from Evol-Instruct. We used it for fine-tuning the WizardLM model.
