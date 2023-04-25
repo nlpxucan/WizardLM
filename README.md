@@ -11,6 +11,8 @@ Empowering Large Language Models to Follow Complex Instructions
 
 ## Overview of Evol-Instruct
 
+Evol-Instruct is a novel method using LLMs instead of humans to automatically mass-produce open-domain instructions of various difficulty levels and skills range, to improve the performance of LLMs.
+
 ## Comparison with ChatGPT under complex instructions
 
 ## Contents
