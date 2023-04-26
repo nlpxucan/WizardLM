@@ -11,10 +11,12 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 ## News
 
-- 🔥 We released **WizardLM: Empowering Large Language Models to Follow Complex Instructions**. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo](https://6f8173a3550ed441ab.gradio.live), [demo_bak](https://06eb64cccb782db792.gradio.live/).
+- 🔥 We released **7B** version of **WizardLM**. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo](https://6f8173a3550ed441ab.gradio.live), [demo_bak](https://06eb64cccb782db792.gradio.live/).
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
-Note: Please use demo and demo_bak as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
+Although on our complexity-balanced test set, **WizardLM-7B outperforms ChatGPT in the high-complexity instructions**, it still lag behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods.
+
+Note for demo usage: Please use demo and demo_bak as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
 ## Overview of Evol-Instruct
 
