@@ -21,6 +21,9 @@ Although on our complexity-balanced test set, **WizardLM-7B outperforms ChatGPT 
 
 Note for demo usage: Please use demo and demo_bak as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
+## Case Show
+We sampled 5 cases to demonstrate the performance of WizardLM and ChatGPT on data of varying difficulty, and the details pls refer [Case Show](https://github.com/nlpxucan/WizardLM/blob/main/src/case_show.md).
+
 ## Overview of Evol-Instruct
 
 [Evol-Instruct](https://github.com/nlpxucan/evol-instruct) is a novel method using LLMs instead of humans to automatically mass-produce open-domain instructions of various difficulty levels and skills range, to improve the performance of LLMs.
