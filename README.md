@@ -1,4 +1,4 @@
-# WizardLM: An Instruction-following LLM Using Evol-Instruct
+## WizardLM: An Instruction-following LLM Using Evol-Instruct
 Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 <p align="center" width="100%">
