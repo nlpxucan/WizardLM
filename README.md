@@ -26,6 +26,10 @@ Note for demo usage: Please use demo and demo_bak as evenly as possible to preve
 <a ><img src="imgs/git_overall.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
+<p align="center" width="100%">
+<a ><img src="imgs/git_running.png" alt="WizardLM" style="width: 68%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
 ## Contents
 
 1. [Online Demo](#online-demo)
