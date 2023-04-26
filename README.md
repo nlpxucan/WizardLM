@@ -69,7 +69,7 @@ This JSON file is a list of dictionaries, each dictionary contains the following
 ## WizardLM Weights
 We release [WizardLM] weights as delta weights to comply with the LLaMA model license.
 You can add our delta to the original LLaMA weights to obtain the WizardLM weights. Instructions:
-1. Get the original LLaMA weights in the huggingface format by following the instructions [here](https://huggingface.co/docs/transformers/main/model_doc/llama).
+1. Get the original LLaMA weights in the Hugging Face format by following the instructions [here](https://huggingface.co/docs/transformers/main/model_doc/llama).
 2. Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM) 
 3. Use the following scripts to get WizardLM weights by applying our delta:
 ```
