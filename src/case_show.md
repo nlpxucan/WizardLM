@@ -1,7 +1,7 @@
 ### Case Show with WizardLM
 
 
-We sampled 5 cases to demonstrate the performance of WizardLM and ChatGPT on data of varying difficulty, and the results are as follows.
+We just sample some cases to demonstrate the performance of WizardLM and ChatGPT on data of varying difficulty, and the results are as follows.
 
 1.Skill: Academic Writing Difficulty level: 8
 
