@@ -11,6 +11,9 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 ## News
 
+At present, our core contributors are fully engaged in preparing the WizardLM-7B model trained with full evolved instructions (**approximately 300k**). We apologize for any possible delay in responding to your questions.
+If you find that the demo is temporarily unavailable, please be patient and **wait a while**. Our contributors regularly check the demo's status and handle any issues.
+
 - 🔥 We released **7B** version of **WizardLM**. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo](https://6f8173a3550ed441ab.gradio.live), [demo_bak](https://06eb64cccb782db792.gradio.live/).
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
