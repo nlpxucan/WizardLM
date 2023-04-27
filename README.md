@@ -19,7 +19,7 @@ If you find that the demo is temporarily unavailable, please be patient and **wa
 
 Although on our complexity-balanced test set, **WizardLM-7B outperforms ChatGPT in the high-complexity instructions**, it still lag behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods.
 
-Note for demo usage: Demo 1-4 are all WizardLM-7B. Please use them as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
+<b>Note for demo usage:</b> Demo 1-4 are all WizardLM-7B. Please use them as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult insturctions to evaluate WizardLM, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardLM. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
