@@ -64,7 +64,12 @@ We will provide our latest models for you to try for as long as possible. If you
 
 [Demo Link](https://6f8173a3550ed441ab.gradio.live)
 
-[Demo Backup](https://261f01fdd31bfe1ca0.gradio.live/)
+[Demo Backup 1](https://261f01fdd31bfe1ca0.gradio.live/)
+
+[Demo Backup 2](https://23973dda4d882b40.gradio.app/)
+
+[Demo Backup 3](https://53771b998543e302.gradio.app/)
+
 
 ## Training Data
 
