@@ -14,12 +14,12 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 At present, our core contributors are fully engaged in preparing the WizardLM-7B model trained with full evolved instructions (**approximately 300k**). We apologize for any possible delay in responding to your questions.
 If you find that the demo is temporarily unavailable, please be patient and **wait a while**. Our contributors regularly check the demo's status and handle any issues.
 
-- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo1](https://6f8173a3550ed441ab.gradio.live), [demo2](https://261f01fdd31bfe1ca0.gradio.live/), [demo3](https://23973dda4d882b40.gradio.app/).
+- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo1](https://6f8173a3550ed441ab.gradio.live), [demo2](https://261f01fdd31bfe1ca0.gradio.live/), [demo3](https://23973dda4d882b40.gradio.app/), [demo4](https://53771b998543e302.gradio.app/).
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
 Although on our complexity-balanced test set, **WizardLM-7B outperforms ChatGPT in the high-complexity instructions**, it still lag behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods.
 
-Note for demo usage: Please use demo and demo_bak as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
+Note for demo usage: Demo 1-4 are all WizardLM-7B. Please use them as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult insturctions to evaluate WizardLM, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardLM. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
