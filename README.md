@@ -21,7 +21,7 @@ Although on our complexity-balanced test set, **WizardLM-7B outperforms ChatGPT 
 
 Note for demo usage: Please use demo and demo_bak as evenly as possible to prevent one of them from being too heavy and responding slowly. We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
-## Call for Feedbakcs
+## Call for Feedbacks
 We welcome everyone to use your professional and difficult insturctions to evaluate WizardLM, and show us examples of poor performance and your suggestions in the issue discussion area. We are focusing on improving the Evol-Instruct now and hope to relieve existing issues in the the next version of WizardLM. After that, we will open the code and pipeline of new Evol-Instruct algorithm and work with you together to improve it.
 
 
