@@ -37,11 +37,11 @@ We just sample some cases to demonstrate the performance of WizardLM and ChatGPT
 [Evol-Instruct](https://github.com/nlpxucan/evol-instruct) is a novel method using LLMs instead of humans to automatically mass-produce open-domain instructions of various difficulty levels and skills range, to improve the performance of LLMs.
 
 <p align="center" width="100%">
-<a ><img src="imgs/git_overall.png" alt="WizardLM" style="width: 68%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/git_overall.png" alt="WizardLM" style="width: 86%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 <p align="center" width="100%">
-<a ><img src="imgs/git_running.png" alt="WizardLM" style="width: 68%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/git_running.png" alt="WizardLM" style="width: 86%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ## Contents
