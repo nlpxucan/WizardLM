@@ -14,6 +14,10 @@
 import json
 import copy
 import logging
+import os
+import glob
+from typing import Union
+
 from dataclasses import dataclass, field
 from typing import Optional, Dict, Sequence
 
@@ -57,6 +61,9 @@ class TrainingArguments(transformers.TrainingArguments):
     model_max_length: int = field(
         default=2048,
         metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},
+    )
+    resume_from_checkpoint: Optional[Union[str, bool]] = field(
+        default=None, metadata={"help": "Path to the checkpoint to resume training from or True to use the latest checkpoint."}
     )
 
 
@@ -261,7 +268,24 @@ def train():
     model.is_parallelizable = True
     model.model_parallel = True
 
-    trainer = Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
+    if training_args.resume_from_checkpoint is True:
+        checkpoints = list(
+            os.path.dirname(c)
+            for c in sorted(
+                glob.glob(os.path.join(training_args.output_dir, "checkpoint-epoch=*.json")),
+                key=lambda x: int(x.split("=")[-1].split(".")[0]),
+            )
+        )
+        if checkpoints:
+            resume_from_checkpoint = checkpoints[-1]
+            print(f"Resuming training from the latest checkpoint: {resume_from_checkpoint}")
+        else:
+            print("No checkpoint found. Starting training from scratch.")
+            resume_from_checkpoint = None
+    else:
+        resume_from_checkpoint = training_args.resume_from_checkpoint
+
+    trainer = Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module, resume_from_checkpoint=resume_from_checkpoint,)
     model.config.use_cache = False
 
     trainer.train()
