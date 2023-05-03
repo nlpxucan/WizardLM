@@ -14,7 +14,7 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 At present, our core contributors are fully engaged in preparing the WizardLM-7B model trained with full evolved instructions (**approximately 300k**). We apologize for any possible delay in responding to your questions.
 If you find that the demo is temporarily unavailable, please be patient and **wait a while**. Our contributors regularly check the demo's status and handle any issues.
 
-- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo1](https://a050e2a1482a9bcf.gradio.app) , [demo2](https://81189ea0b66d14f256.gradio.live)
+- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo1](https://a050e2a1482a9bcf.gradio.app) , [demo2](https://5d5621c3ed330a92.gradio.app)
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
 Although on our **complexity-balanced test set**, **WizardLM-7B has more cases that are preferred by human labelers than ChatGPT** in the high-complexity instructions (difficulty level >= 8), it still lags behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods.
@@ -68,7 +68,7 @@ We will provide our latest models for you to try for as long as possible. If you
 
 [Demo Link](https://a050e2a1482a9bcf.gradio.app)
 
-[Demo Backup 1](https://81189ea0b66d14f256.gradio.live)
+[Demo Backup 1](https://5d5621c3ed330a92.gradio.app)
 
 
 
