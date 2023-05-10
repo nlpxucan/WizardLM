@@ -24,6 +24,8 @@ except:
 def evaluate(
         batch_data,
         input=None,
+        model=None,
+        tokenizer=None,
         temperature=1,
         top_p=0.9,
         top_k=40,
@@ -104,7 +106,7 @@ def main(
         one_data = json.loads(line)
         id = one_data["idx"]
         instruction = one_data["Instruction"]
-        _output = evaluate(instruction)
+        _output = evaluate(instruction, model=model, tokenizer=tokenizer)
         final_output = _output[0].split("### Response:")[1].strip()
         new_data = {
             "id": id,
