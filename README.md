@@ -135,6 +135,9 @@ deepspeed train_freeform.py \
     --fp16 True
 ```
 
+## Distributed Fine-tuning
+See [Distributed Fine-tuning](./doc/distributed_finetune.md)
+
 ## Inference
 
 We provide the decoding script for WizardLM, which reads a input file and generates corresponding responses for each sample, and finally consolidates them into an output file.
