@@ -54,13 +54,15 @@ We just sample some cases to demonstrate the performance of WizardLM and ChatGPT
 
 4. [Fine-tuning](#finetune)
 
-5. [Inference](#inference)
+5. [Distributed Fine-tuning](#distributed-Fine-tuning)
 
-6. [Evaluation](#evaluation)
+6. [Inference](#inference)
 
-7. [Citation](#citation)
+7. [Evaluation](#evaluation)
 
-8. [Disclaimer](#disclaimer)
+8. [Citation](#citation)
+
+9. [Disclaimer](#disclaimer)
 
 ## Online Demo
 
