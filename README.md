@@ -52,7 +52,7 @@ We just sample some cases to demonstrate the performance of WizardLM and ChatGPT
 
 3. [WizardLM Weights](#wizardlm-weights)
 
-4. [Fine-tuning](#finetune)
+4. [Fine-tuning](#fine-tuning)
 
 5. [Distributed Fine-tuning](#distributed-Fine-tuning)
 
