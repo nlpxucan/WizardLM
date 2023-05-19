@@ -48,7 +48,7 @@ We just sample some cases to demonstrate the performance of WizardLM and ChatGPT
 
 1. [Online Demo](#online-demo)
 
-2. [Training Data](#train_data)
+2. [Training Data](#training-data)
 
 3. [WizardLM Weights](#wizardlm-weights)
 
