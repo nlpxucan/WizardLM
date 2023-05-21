@@ -14,7 +14,7 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 At present, our core contributors are fully engaged in preparing the WizardLM-7B model trained with full evolved instructions (**approximately 300k**). We apologize for any possible delay in responding to your questions.
 If you find that the demo is temporarily unavailable, please be patient and **wait a while**. Our contributors regularly check the demo's status and handle any issues.
 
-- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo1](https://36e20005221d21bf.gradio.app) , [demo2](https://05dc20562dd63700.gradio.app)
+- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [demo1](https://011fc8477ad734d7.gradio.app) , [demo2](https://1825e531c43a23c7.gradio.app)
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
 Although on our **complexity-balanced test set**, **WizardLM-7B has more cases that are preferred by human labelers than ChatGPT** in the high-complexity instructions (difficulty level >= 8), it still lags behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods.
@@ -68,9 +68,9 @@ We just sample some cases to demonstrate the performance of WizardLM and ChatGPT
 
 We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many **real-world** and **challenging** problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
 
-[Demo Link](https://36e20005221d21bf.gradio.app)
+[Demo Link](https://011fc8477ad734d7.gradio.app)
 
-[Demo Backup 1](https://05dc20562dd63700.gradio.app)
+[Demo Backup 1](https://1825e531c43a23c7.gradio.app)
 
 
 
