@@ -14,7 +14,8 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 At present, our core contributors are fully engaged in preparing the WizardLM-7B model trained with full evolved instructions (**approximately 300k**). We apologize for any possible delay in responding to your questions.
 If you find that the demo is temporarily unavailable, please be patient and **wait a while**. Our contributors regularly check the demo's status and handle any issues.
 
-- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions. Checkout the [paper](https://arxiv.org/abs/2304.12244) and [Demo_7B](https://f195ccdce69a86d5.gradio.app) , [Demo_7B_bak](https://ce25bd0feced0f77.gradio.app)
+- 🔥 We released **13B** version of **WizardLM** trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_13B](https://a6d4f31b5a1ee33f.gradio.app/) and the GPT-4 evaluation.
+- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions (from Alpaca data). Checkout the [paper](https://arxiv.org/abs/2304.12244) and [Demo_7B](https://f195ccdce69a86d5.gradio.app) , [Demo_7B_bak](https://ce25bd0feced0f77.gradio.app)
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
 <!-- Although on our **complexity-balanced test set**, **WizardLM-7B has more cases that are preferred by human labelers than ChatGPT** in the high-complexity instructions (difficulty level >= 8), it still lags behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods. -->
