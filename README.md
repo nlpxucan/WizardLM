@@ -24,8 +24,8 @@ At present, our core contributors are preparing the **33B** version and we expec
 ### GPT-4 automatic evaluation
 
 We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat to assess the performance of chatbot models. As shown in the following figure, WizardLM-13B achieved better results than Vicuna-13b. 
-<p align="center" width="60%">
-<a ><img src="imgs/WizarLM13b-GPT4.png" alt="WizardLM" style="width: 60%; min-width: 300px; display: block; margin: auto;"></a>
+<p align="center" width="80%">
+<a ><img src="imgs/WizarLM13b-GPT4.png" alt="WizardLM" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ## Call for Feedbacks
