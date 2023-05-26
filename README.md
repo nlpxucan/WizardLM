@@ -26,16 +26,16 @@ At present, our core contributors are preparing the **33B** version and we expec
 ### GPT-4 automatic evaluation
 
 We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat to assess the performance of chatbot models. As shown in the following figure, WizardLM-13B achieved better results than Vicuna-13b. 
-<p align="center" width="96%">
-<a ><img src="imgs/WizarLM13b-GPT4.png" alt="WizardLM" style="width: 96%; min-width: 300px; display: block; margin: auto;"></a>
+<p align="center" width="100%">
+<a ><img src="imgs/WizarLM13b-GPT4.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ### WizardLM-13B performance on different skills.
 
 The following figure compares WizardLM-13B and ChatGPT’s skill on Evol-Instruct testset. The result indicates that WizardLM-13B achieves 89.1% of ChatGPT’s performance on average, with almost 100% (or more than) capacity on 10 skills, and more than 90% capacity on 22 skills.
 
-<p align="center" width="96%">
-<a ><img src="imgs/evol-testset_skills-13b.png" alt="WizardLM" style="width: 96%; min-width: 300px; display: block; margin: auto;"></a>
+<p align="center" width="100%">
+<a ><img src="imgs/evol-testset_skills-13b.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ## Call for Feedbacks
