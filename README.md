@@ -11,8 +11,7 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 ## News
 
-At present, our core contributors are fully engaged in preparing the WizardLM-7B model trained with full evolved instructions (**approximately 300k**). We apologize for any possible delay in responding to your questions.
-If you find that the demo is temporarily unavailable, please be patient and **wait a while**. Our contributors regularly check the demo's status and handle any issues.
+At present, our core contributors are preparing the **33B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 
 - 🔥 We released **13B** version of **WizardLM** trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_13B](https://a6d4f31b5a1ee33f.gradio.app/) and the GPT-4 evaluation.
 - 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions (from Alpaca data). Checkout the [paper](https://arxiv.org/abs/2304.12244) and [Demo_7B](https://f195ccdce69a86d5.gradio.app) , [Demo_7B_bak](https://ce25bd0feced0f77.gradio.app)
