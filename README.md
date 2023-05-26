@@ -30,6 +30,12 @@ We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat 
 <a ><img src="imgs/WizarLM13b-GPT4.png" alt="WizardLM" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
+### WizardLM-13B Skills
+
+<p align="center" width="80%">
+<a ><img src="imgs/evol-testset_skills-13b.png" alt="WizardLM" style="width: 80%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult instructions to evaluate WizardLM, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardLM. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
 
