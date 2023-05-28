@@ -21,7 +21,8 @@ At present, our core contributors are preparing the **33B** version and we expec
 
 <b><red>Note for 13B model usage:</red></b> To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our 13B model for inference. Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
 
-<b>For WizardLM-13B-1.0, the Prompt should be as following:</b>
+<b>For WizardLM-13B-1.0 </b>, the Prompt should be as following:
+
 Prompt for first round of conversation:
 ```
 A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello, who are you? ASSISTANT: 
@@ -30,6 +31,13 @@ Prompt for second round of conversation:
 ```
 A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello, who are you? ASSISTANT: Hello! I am an AI language model designed to assist you with your questions and provide helpful information. How can I assist you today?</s>USER: what do you like? ASSISTANT:
 ```
+
+<b>For WizardLM-7B, the Prompt should be as following:</b>
+
+```
+"{instruction}\n\n### Response:"
+```
+
 
 <b>Note for demo usage:</b> We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
