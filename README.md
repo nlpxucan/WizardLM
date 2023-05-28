@@ -13,8 +13,8 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 At present, our core contributors are preparing the **33B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 
-- 🔥 We released **13B** version of **WizardLM** (**WizardLM-13B 1.0**) trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_13B](https://80fe9b5870faafb8.gradio.app), [Demo_13B_bak](https://e79c80d2c2379e77.gradio.app) and the GPT-4 evaluation. Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM-13B-1.0).
-- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions (from Alpaca data). Checkout the [paper](https://arxiv.org/abs/2304.12244) and [Demo_7B](https://f195ccdce69a86d5.gradio.app) , [Demo_7B_bak](https://ce25bd0feced0f77.gradio.app)
+- 🔥 We released **13B** version of **WizardLM** (**WizardLM-13B 1.0**) trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_13B](https://a6569cc4f5b202f2.gradio.app/) and the GPT-4 evaluation. Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM-13B-1.0).
+- 🔥 We released **7B** version of **WizardLM** trained with **70k** evolved instructions (from Alpaca data). Checkout the [paper](https://arxiv.org/abs/2304.12244) and [Demo_7B](https://f195ccdce69a86d5.gradio.app)
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
 <!-- Although on our **complexity-balanced test set**, **WizardLM-7B has more cases that are preferred by human labelers than ChatGPT** in the high-complexity instructions (difficulty level >= 8), it still lags behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods. -->
