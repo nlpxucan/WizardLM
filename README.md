@@ -22,9 +22,7 @@ At present, our core contributors are preparing the **33B** version and we expec
 
 <b>Note for 13B model usage:</b>
 
-To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our 13B model for inference. 
-
-Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
+To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our 13B model for inference. Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
 
 <b>For WizardLM-13B-1.0 </b>, the Prompt should be as following:
 
