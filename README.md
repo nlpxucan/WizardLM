@@ -28,16 +28,11 @@ Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> a
 
 <b>For WizardLM-13B-1.0 </b>, the Prompt should be as following:
 
-Prompt for first round of conversation:
 ```
 A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello, who are you? ASSISTANT: 
 ```
-Prompt for second round of conversation:
-```
-A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello, who are you? ASSISTANT: Hello! I am an AI language model designed to assist you with your questions and provide helpful information. How can I assist you today?</s>USER: what do you like? ASSISTANT:
-```
 
-<b>For WizardLM-7B, the Prompt should be as following:</b>
+<b>For WizardLM-7B </b>, the Prompt should be as following:
 
 ```
 "{instruction}\n\n### Response:"
