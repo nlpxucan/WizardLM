@@ -178,15 +178,8 @@ We provide the decoding script for WizardLM, which reads a input file and genera
 
 You can specify `base_model`, `input_data_path` and `output_data_path` in src\inference_wizardlm.py or src\infer_wizardlm13b.py to set the decoding model, path of input file and path of output file.
 
-The decoding command of 7B model:
-```
-python src\inference_wizardlm.py
-```
 
-The decoding command of 13B model:
-```
-python src/infer_wizardlm13b.py
-```
+
 
 <b>For WizardLM-13B-1.0 </b>, the Prompt should be as following:
 
@@ -194,11 +187,22 @@ python src/infer_wizardlm13b.py
 A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello, who are you? ASSISTANT: 
 ```
 
+The decoding command of 13B model:
+```
+python src/infer_wizardlm13b.py
+```
+
 <b>For WizardLM-7B </b>, the Prompt should be as following:
 
 ```
 "{instruction}\n\n### Response:"
 ```
+
+The decoding command of 7B model:
+```
+python src\inference_wizardlm.py
+```
+
 
 ### Evaluation
 
