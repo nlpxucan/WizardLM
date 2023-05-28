@@ -19,8 +19,12 @@ At present, our core contributors are preparing the **33B** version and we expec
 
 <!-- Although on our **complexity-balanced test set**, **WizardLM-7B has more cases that are preferred by human labelers than ChatGPT** in the high-complexity instructions (difficulty level >= 8), it still lags behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods. -->
 
-- ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Note for 13B model usage:`
-To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our 13B model for inference. Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
+
+<b>Note for 13B model usage:</b>
+
+To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our 13B model for inference. 
+
+Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
 
 <b>For WizardLM-13B-1.0 </b>, the Prompt should be as following:
 
@@ -38,9 +42,6 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 ```
 "{instruction}\n\n### Response:"
 ```
-
-
-<b>Note for demo usage:</b> We only recommend using **English** to experience our model. Support for other languages will be introduced in the future. The demo currently only supports **single-turn** conversation.
 
 ### GPT-4 automatic evaluation
 
