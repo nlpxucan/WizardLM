@@ -43,12 +43,12 @@ We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat 
 <a ><img src="imgs/WizarLM30b-GPT4.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
-### WizardLM-13B performance on different skills.
+### WizardLM-30B performance on different skills.
 
-The following figure compares WizardLM-13B and ChatGPT’s skill on Evol-Instruct testset. The result indicates that WizardLM-13B achieves 89.1% of ChatGPT’s performance on average, with almost 100% (or more than) capacity on 10 skills, and more than 90% capacity on 22 skills.
+The following figure compares WizardLM-30B and ChatGPT’s skill on Evol-Instruct testset. The result indicates that WizardLM-30B achieves 97.8% of ChatGPT’s performance on average, with almost 100% (or more than) capacity on 18 skills, and more than 90% capacity on 24 skills.
 
 <p align="center" width="100%">
-<a ><img src="imgs/evol-testset_skills-13b.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/evol-testset_skills-30b.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ## Call for Feedbacks
