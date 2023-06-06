@@ -38,9 +38,9 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 
 ### GPT-4 automatic evaluation
 
-We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat to assess the performance of chatbot models. As shown in the following figure, WizardLM-13B achieved better results than Vicuna-13b. 
+We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat to assess the performance of chatbot models. As shown in the following figure, WizardLM-30B achieved better results than Guanaco-65b. 
 <p align="center" width="100%">
-<a ><img src="imgs/WizarLM13b-GPT4.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="imgs/WizarLM30b-GPT4.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ### WizardLM-13B performance on different skills.
