@@ -11,7 +11,7 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 ## News
 
-At present, our core contributors are preparing the **33B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
+At present, our core contributors are preparing the **65B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 
 - 🔥 We released **30B** version of **WizardLM** (**WizardLM-30B 1.0**) trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_30B](https://79066dd473f6f592.gradio.app/) and the GPT-4 evaluation.
 - 🔥 We released **13B** version of **WizardLM** (**WizardLM-13B 1.0**) trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_13B](https://d267e69d3d4435a2.gradio.app) and the GPT-4 evaluation. Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM-13B-1.0).
