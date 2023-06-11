@@ -52,6 +52,39 @@ The following figure compares WizardLM-30B and ChatGPT’s skill on Evol-Instruc
 <a ><img src="imgs/evol-testset_skills-30b.png" alt="WizardLM" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
+### WizardLM performance on NLP foundation tasks.
+
+The following table provides a comparison of WizardLMs and other LLMs on NLP foundation tasks. The results indicate that WizardLMs consistently exhibit superior performance in comparison to the LLaMa models of the same size. Furthermore, our WizardLM-30B model showcases comparable performance to OpenAI's Text-davinci-003 on the MMLU and HellaSwag benchmarks.
+
+| Model            | MMLU 5-shot | ARC 25-shot | TruthfulQA 0-shot | HellaSwag 10-shot | Average    |
+|------------------|-------------|-------------|-------------------|-------------------|------------|
+| Text-davinci-003 | <u>56.9<u/> | **85.2**    | **59.3**          | <u>82.2<u/>       | **70.9**   |
+| Vicuna-13b 1.1   | 51.3        | 52.99       | 51.82             | 80.12             | 59.1       |
+| WizardLM-7B      | 42.7        | 51.62       | 44.67             | 77.67             | 54.2       |
+| WizardLM-13B     | 52.3        | 57.17       | 50.52             | 80.95             | 60.2       |
+| WizardLM-30B     | **58.8**    | <u>62.54<u/>| <u>52.38<u/>      | **83.26**         | <u>64.2<u/>|
+
+### WizardLM performance on code generation.
+
+The following table provides a comprehensive comparison of WizardLMs and several other LLMs on the code generation task, namely HumanEval. The evaluation metric is pass@1. The results indicate that WizardLMs consistently exhibit superior performance in comparison to the LLaMa models of the same size. Furthermore, our WizardLM-30B model surpasses StarCoder and OpenAI's code-cushman-001.
+
+
+| Model            | HumanEval Pass@1 |
+|------------------|------------------|
+| LLaMA-7B         | 10.5             |
+| LLaMA-13B        | 15.8             |
+| CodeGen-16B-Multi| 18.3             |
+| CodeGeeX         | 22.9             |
+| LLaMA-33B        | 21.7             |
+| LLaMA-65B        | 23.7             |
+| PaLM-540B        | 26.2             |
+| CodeGen-16B-Mono | 29.3             |
+| code-cushman-001 | 33.5             |
+| StarCoder        | <u>33.6<u/>      |
+| WizardLM-7B      | 19.1             |
+| WizardLM-13B     | 24.0             |
+| WizardLM-30B     | **37.8**         |
+
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult instructions to evaluate WizardLM, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardLM. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
 
