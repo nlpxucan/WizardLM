@@ -84,6 +84,7 @@ The following table provides a comprehensive comparison of WizardLMs and several
 | WizardLM-7B      | 19.1             | 23.3        |
 | WizardLM-13B     | 24.0             | 28.6        |
 | WizardLM-30B     | 37.8             | -           |
+
 **We re-evaluate the model by ourselves.*
 
 ## Call for Feedbacks
