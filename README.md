@@ -13,7 +13,7 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 At present, our core contributors are preparing the **65B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 
-- 🔥 We released **30B** version of **WizardLM** (**WizardLM-30B-V1.0**) trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_30B](https://d3cf8ad71cd54e80.gradio.app), [Demo_30B_bak](https://1f3f7c5d709eb5e5.gradio.app) and the GPT-4 evaluation. Please download our delta model at the following [link](https://huggingface.co/WizardLM/WizardLM-30B-V1.0).
+- 🔥 We released **30B** version of **WizardLM** (**WizardLM-30B-V1.0**) trained with **250k** evolved instructions (from ShareGPT). Checkout the [Demo_30B](https://5f005c4b76e7759f.gradio.app), [Demo_30B_bak](https://1f3f7c5d709eb5e5.gradio.app) and the GPT-4 evaluation. Please download our delta model at the following [link](https://huggingface.co/WizardLM/WizardLM-30B-V1.0).
 - 🔥 We released **13B** version of **WizardLM** (**WizardLM-13B-V1.0**) trained with **250k** evolved instructions (from ShareGPT).Please download our delta model at the following [link](https://huggingface.co/victor123/WizardLM-13B-1.0).
 - 🔥 We released **7B** version of **WizardLM** (**WizardLM-7B-V1.0**) trained with **70k** evolved instructions (from Alpaca data). Checkout the [paper](https://arxiv.org/abs/2304.12244).
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
