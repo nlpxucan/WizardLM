@@ -15,7 +15,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 ## Comparing WizardCoder with the Closed-Source Models.
 
-The SOTA LLMs for code generation, such as GPT4, Claude, and Bard, are predominantly closed-source. Acquiring access to the APIs of these models proves challenging. In this study, we adopt an alternative approach by retrieving the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a single attempt, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding.
+The SOTA LLMs for code generation, such as GPT4, Claude, and Bard, are predominantly closed-source. Acquiring access to the APIs of these models proves challenging. In this study, we adopt an alternative approach by retrieving the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a **single attempt**, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding.
 
 🔥 The following figure shows that our **WizardCoder attains the third position in this benchmark**, surpassing Claude-Plus (59.8 vs. 53.0) and Bard (59.8 vs. 44.5). Notably, our model exhibits a substantially smaller size compared to these models.
 
@@ -25,7 +25,7 @@ The SOTA LLMs for code generation, such as GPT4, Claude, and Bard, are predomina
 
 ## Comparing WizardCoder with the Open-Source Models.
 
-The following table conducts a comprehensive comparison of our **WizardCoder** with other models on the HumanEval and MBPP benchmarks. We adhere to the approach outlined in previous studies by generating n samples for each problem to estimate the pass@1 score. The findings clearly demonstrate that our **WizardCoder** exhibits a substantial performance advantage over all the open-source models.
+The following table conducts a comprehensive comparison of our **WizardCoder** with other models on the HumanEval and MBPP benchmarks. We adhere to the approach outlined in previous studies by generating **20 samples** for each problem to estimate the pass@1 score. The findings clearly demonstrate that our **WizardCoder** exhibits a substantial performance advantage over all the open-source models.
 
 
 | Model            | HumanEval Pass@1 | MBPP Pass@1 |
