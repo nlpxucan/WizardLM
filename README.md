@@ -74,7 +74,7 @@ The following table provides a comparison of WizardLMs and other LLMs on NLP fou
 
 ### WizardLM performance on code generation.
 
-The following table provides a comprehensive comparison of WizardLMs and several other LLMs on the code generation task, namely HumanEval. The evaluation metric is pass@1. The results indicate that WizardLMs consistently exhibit superior performance in comparison to the LLaMa models of the same size. Furthermore, our WizardLM-30B model surpasses StarCoder and OpenAI's code-cushman-001.
+The following table provides a comprehensive comparison of WizardLMs and several other LLMs on the code generation task, namely HumanEval. The evaluation metric is pass@1. The results indicate that WizardLMs consistently exhibit superior performance in comparison to the LLaMa models of the same size. Furthermore, our WizardLM-30B model surpasses StarCoder and OpenAI's code-cushman-001. Moreover, our Code LLM, WizardCoder, demonstrates exceptional performance, achieving a pass@1 score of 57.3, surpassing the open-source SOTA by approximately 20 points.
 
 
 | Model            | HumanEval Pass@1 |
@@ -92,6 +92,7 @@ The following table provides a comprehensive comparison of WizardLMs and several
 | WizardLM-7B 1.0      | 19.1             |
 | WizardLM-13B 1.0     | 24.0             |
 | WizardLM-30B  1.0   | **37.8**         |
+| WizardCoder-15B  1.0 | **57.3**     |
 
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult instructions to evaluate WizardLM, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardLM. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
