@@ -38,6 +38,12 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 "{instruction}\n\n### Response:"
 ```
 
+<b>For WizardCoder-15B-V1.0 </b>, the Prompt should be as following:
+
+```
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:"
+```
+
 ### GPT-4 automatic evaluation
 
 We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat to assess the performance of chatbot models. As shown in the following figure, WizardLM-30B achieved better results than Guanaco-65B. 
