@@ -134,8 +134,23 @@ python src\inference_wizardcoder.py \
     --output_data_path "/your/path/to/output/result.jsonl"
 ```
 
+The format of `data.jsonl` should be:
+```
+{"idx": 11, "Instruction": "Write a Python code to count 1 to 10."}
+{"idx": 12, "Instruction": "Write a Jave code to sum 1 to 10."}
+```
 
-### Evaluation
+The prompt for our WizardCoder in `src\inference_wizardcoder.py` is:
+```
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+### Instruction:
+{instruction}
+
+### Response:
+```
+
+## Evaluation
 
 We provide the evaluation script on HumanEval for WizardCoder.
 
@@ -182,7 +197,7 @@ python process_humaneval.py --path ${output_path} --out_path ${output_path}.json
 evaluate_functional_correctness ${output_path}.jsonl
 ```
 
-### Citation
+## Citation
 
 Please cite the repo if you use the data or code in this repo.
 
