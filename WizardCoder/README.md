@@ -9,13 +9,11 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 ## News
 
 - 🔥 Our **WizardCoder-15B-V1.0** model achieves the **57.3 pass@1** on the [HumanEval Benchmarks](https://github.com/openai/human-eval), which is **22.3** points higher than the SOTA open-source Code LLMs.
-- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo](https://f245f8683a11cf52.gradio.app/), and [Paper]().
+- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support English now.)](https://f245f8683a11cf52.gradio.app/), and [Paper]().
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
 
 ## Comparing WizardCoder with the Closed-Source Models.
-
-The SOTA LLMs for code generation, such as GPT4, Claude, and Bard, are predominantly closed-source. Acquiring access to the APIs of these models proves challenging. In this study, we adopt an alternative approach by retrieving the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a **single attempt**, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding.
 
 🔥 The following figure shows that our **WizardCoder attains the third position in this benchmark**, surpassing Claude-Plus (59.8 vs. 53.0) and Bard (59.8 vs. 44.5). Notably, our model exhibits a substantially smaller size compared to these models.
 
@@ -23,9 +21,11 @@ The SOTA LLMs for code generation, such as GPT4, Claude, and Bard, are predomina
 <a ><img src="imgs/pass1.png" alt="WizardCoder" style="width: 86%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
+❗**Note: In this study, we copy the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a **single attempt**, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding and tests with the same [code](https://github.com/evalplus/evalplus).**
+
 ## Comparing WizardCoder with the Open-Source Models.
 
-The following table conducts a comprehensive comparison of our **WizardCoder** with other models on the HumanEval and MBPP benchmarks. We adhere to the approach outlined in previous studies by generating **20 samples** for each problem to estimate the pass@1 score. The findings clearly demonstrate that our **WizardCoder** exhibits a substantial performance advantage over all the open-source models.
+The following table clearly demonstrates that our **WizardCoder** exhibits a substantial performance advantage over all the open-source models. ❗**If you are confused with the different scores of our model (57.3 and 59.8), please check the Notes.**
 
 
 | Model            | HumanEval Pass@1 | MBPP Pass@1 |
@@ -44,7 +44,9 @@ The following table conducts a comprehensive comparison of our **WizardCoder** w
 | WizardLM-30B  1.0| 37.8             |--           |
 | WizardCoder-15B  1.0 | **57.3**     |**51.8**     |
 
-*： The reproduced result of StarCoder on MBPP.
+❗**Note: The reproduced result of StarCoder on MBPP.**
+
+❗**Note: The above table conducts a comprehensive comparison of our **WizardCoder** with other models on the HumanEval and MBPP benchmarks. We adhere to the approach outlined in previous studies by generating **20 samples** for each problem to estimate the pass@1 score and evaluate with the same [code](https://github.com/openai/human-eval/tree/master). The scores of GPT4 and GPT3.5 reported by [OpenAI](https://openai.com/research/gpt-4) are 67.0 and 48.1 (maybe these are the early version GPT4&3.5).**
 
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult instructions to evaluate WizardCoder, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardCoder. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
@@ -137,7 +139,7 @@ python src\inference_wizardcoder.py \
 The format of `data.jsonl` should be:
 ```
 {"idx": 11, "Instruction": "Write a Python code to count 1 to 10."}
-{"idx": 12, "Instruction": "Write a Jave code to sum 1 to 10."}
+{"idx": 12, "Instruction": "Write a Java code to sum 1 to 10."}
 ```
 
 The prompt for our WizardCoder in `src\inference_wizardcoder.py` is:
