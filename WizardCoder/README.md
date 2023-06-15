@@ -189,6 +189,7 @@ for ((i = 0; i < $gpu_num; i++)); do
   if (($index % $gpu_num == 0)); then wait; fi
 done
 ```
+
 3. Run the post processing code `src/process_humaneval.py` to collect the code completions from all answer files.
 ```bash
 output_path=preds/T${temp}_N${pred_num}
@@ -198,6 +199,8 @@ python process_humaneval.py --path ${output_path} --out_path ${output_path}.json
 
 evaluate_functional_correctness ${output_path}.jsonl
 ```
+
+Acknowledgement: The evaluation code `humaneval_gen.py` and bash script are modified from the great works of [CodeT5](https://github.com/salesforce/CodeT5).
 
 ## Citation
 
