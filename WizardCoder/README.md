@@ -68,7 +68,7 @@ We welcome everyone to use your professional and difficult instructions to evalu
 
 We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many **real-world** and **challenging** code-related problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
 
-[Demo Link](https://1c48cbf5c83110ed.gradio.app/) (We adopt the greedy decoding now.)
+[Demo Link](https://f245f8683a11cf52.gradio.app/) (We adopt the greedy decoding now.)
 
 ## Fine-tuning
 
