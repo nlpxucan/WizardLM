@@ -13,6 +13,8 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 At present, our core contributors are preparing the **65B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 
+- 🔥🔥🔥 we released the latest optimized version of Evol-Instruct training data of WizardLM model. Please refer to [this HuggingFace Repo](https://huggingface.co/datasets/WizardLM/WizardLM_evol_instruct_V2_196k) to download. 
+
 - 🔥🔥🔥 We released **WizardCoder-15B-V1.0** (trained with **78k** evolved code instructions), which surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval). For more details (Paper, [Demo (Only support code-related English instructions now.)](https://8194635813f45a1e.gradio.app/), [Backup Demo1](https://375cead61e4db124.gradio.app/), [Backup Demo2](https://1594ad375fc80cc7.gradio.app/), [Backup Demo3](https://4989441110ee350f.gradio.app/), [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0)), please refer to [WizardCoder](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder).
 
 - 🔥 Our WizardLM-13B-V1.0 model achieves the 1st-rank of the opensource models on the [AlpacaEval Leaderboard](https://tatsu-lab.github.io/alpaca_eval/).
