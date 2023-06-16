@@ -9,7 +9,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 ## News
 
 - 🔥 Our **WizardCoder-15B-V1.0** model achieves the **57.3 pass@1** on the [HumanEval Benchmarks](https://github.com/openai/human-eval), which is **22.3** points higher than the SOTA open-source Code LLMs.
-- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support code-related English instructions now.)](https://e5eaf7d09cc1521c.gradio.app/), [Backup Demo1](https://375cead61e4db124.gradio.app/), [Backup Demo2](https://1594ad375fc80cc7.gradio.app/), [Backup Demo3](https://4989441110ee350f.gradio.app/), [Backup Demo4](https://8821d10c477083e9.gradio.app/), and [Paper]().
+- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support code-related English instructions now.)](https://e5eaf7d09cc1521c.gradio.app/), [Backup Demo1](https://375cead61e4db124.gradio.app/), [Backup Demo2](https://1594ad375fc80cc7.gradio.app/), [Backup Demo3](https://4989441110ee350f.gradio.app/), [Backup Demo4](https://8821d10c477083e9.gradio.app/), and [Paper](https://arxiv.org/abs/2306.08568).
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
 
@@ -70,7 +70,7 @@ We welcome everyone to use your professional and difficult instructions to evalu
 
 We will provide our latest models for you to try for as long as possible. If you find a link is not working, please try another one. At the same time, please try as many **real-world** and **challenging** code-related problems that you encounter in your work and life as possible. We will continue to evolve our models with your feedbacks.
 
-[Demo Link](https://f245f8683a11cf52.gradio.app/) (We adopt the greedy decoding now.)
+[Demo Link](https://e5eaf7d09cc1521c.gradio.app/) (We adopt the greedy decoding now.)
 
 ## Fine-tuning
 
@@ -211,6 +211,9 @@ Please cite the repo if you use the data or code in this repo.
       title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct}, 
       author={Ziyang Luo and Can Xu and Pu Zhao and Qingfeng Sun and Xiubo Geng and Wenxiang Hu and Chongyang Tao and Jing Ma and Qingwei Lin and Daxin Jiang},
       year={2023},
+      eprint={2306.08568},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
 ## Disclaimer
