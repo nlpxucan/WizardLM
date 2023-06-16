@@ -211,6 +211,9 @@ Please cite the repo if you use the data or code in this repo.
       title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct}, 
       author={Ziyang Luo and Can Xu and Pu Zhao and Qingfeng Sun and Xiubo Geng and Wenxiang Hu and Chongyang Tao and Jing Ma and Qingwei Lin and Daxin Jiang},
       year={2023},
+      eprint={2306.08568},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }
 ```
 ## Disclaimer
