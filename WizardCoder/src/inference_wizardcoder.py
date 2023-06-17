@@ -2,16 +2,11 @@ import sys
 import os
 import fire
 import torch
-import transformers
-import json
 import jsonlines
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 
-if torch.cuda.is_available():
-    device = "cuda"
-else:
-    device = "cpu"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 try:
     if torch.backends.mps.is_available():
@@ -52,8 +47,7 @@ def evaluate(
             max_new_tokens=max_new_tokens,
         )
     s = generation_output.sequences
-    output = tokenizer.batch_decode(s, skip_special_tokens=True)
-    return output
+    return tokenizer.batch_decode(s, skip_special_tokens=True)
 
 
 def generate_prompt(instruction, input=None):
@@ -70,7 +64,7 @@ def main(
     base_model: str = "Model_Path",
     input_data_path = "Input.jsonl",
     output_data_path = "Output.jsonl",
-):
+):  # sourcery skip: avoid-builtin-shadow
     assert base_model, (
         "Please specify a --base_model, e.g. --base_model='bigcode/starcoder'"
     )
@@ -102,7 +96,7 @@ def main(
     input_data = jsonlines.open(input_data_path, mode='r')
     output_data = jsonlines.open(output_data_path, mode='w')
 
-    for num, line in enumerate(input_data):
+    for line in input_data:
         one_data = line
         id = one_data["idx"]
         instruction = one_data["Instruction"]
