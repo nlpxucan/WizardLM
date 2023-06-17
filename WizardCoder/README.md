@@ -51,6 +51,9 @@ The following table clearly demonstrates that our **WizardCoder** exhibits a sub
 ## Call for Feedbacks
 We welcome everyone to use your professional and difficult instructions to evaluate WizardCoder, and show us examples of poor performance and your suggestions in the [issue discussion](https://github.com/nlpxucan/WizardLM/issues) area. We are focusing on improving the Evol-Instruct now and hope to relieve existing weaknesses and issues in the the next version of WizardCoder. After that, we will open the code and pipeline of up-to-date Evol-Instruct algorithm and work with you together to improve it.
 
+## Unofficial Video Introductions
+Thanks to the enthusiastic friends, their video introductions are more lively and interesting.
+1. [WizardCoder AI Is The NEW ChatGPT's Coding TWIN!](https://www.youtube.com/watch?v=XjsyHrmd3Xo)
 
 ## Contents
 

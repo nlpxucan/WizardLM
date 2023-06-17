@@ -105,6 +105,7 @@ We welcome everyone to use your professional and difficult instructions to evalu
 Thanks to the enthusiastic friends, their video introductions are more lively and interesting.
 1. [GET WizardLM NOW! 7B LLM KING That Can Beat ChatGPT! I'm IMPRESSED!](https://www.youtube.com/watch?v=SaJ8wyKMBds)
 2. [WizardLM: Enhancing Large Language Models to Follow Complex Instructions](https://www.youtube.com/watch?v=I6sER-qivYk)
+3. [WizardCoder AI Is The NEW ChatGPT's Coding TWIN!](https://www.youtube.com/watch?v=XjsyHrmd3Xo)
 
 ## Overview of Evol-Instruct
 
