@@ -121,7 +121,7 @@ Thanks to the enthusiastic friends, their video introductions are more lively an
 
 ### Citation
 
-Please cite the repo if you use the data or code in this repo.
+Please cite the paper if you use the data or code from WizardLM.
 
 ```
 @misc{xu2023wizardlm,
@@ -129,6 +129,18 @@ Please cite the repo if you use the data or code in this repo.
       author={Can Xu and Qingfeng Sun and Kai Zheng and Xiubo Geng and Pu Zhao and Jiazhan Feng and Chongyang Tao and Daxin Jiang},
       year={2023},
       eprint={2304.12244},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+Please cite the paper if you use the data or code from WizardCoder.
+
+```
+@misc{luo2023wizardcoder,
+      title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct}, 
+      author={Ziyang Luo and Can Xu and Pu Zhao and Qingfeng Sun and Xiubo Geng and Wenxiang Hu and Chongyang Tao and Jing Ma and Qingwei Lin and Daxin Jiang},
+      year={2023},
+      eprint={2306.08568},
       archivePrefix={arXiv},
       primaryClass={cs.CL}
 }
