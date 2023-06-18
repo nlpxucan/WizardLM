@@ -157,7 +157,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 
 ## Evaluation
 
-We provide the evaluation script on HumanEval for WizardCoder.
+### HumanEval
 
 1. According to the instructions of [HumanEval](https://github.com/openai/human-eval), install the environment.
 2. Run the following script to generate the answer.
@@ -203,7 +203,54 @@ python process_humaneval.py --path ${output_path} --out_path ${output_path}.json
 evaluate_functional_correctness ${output_path}.jsonl
 ```
 
-Acknowledgement: The evaluation code `humaneval_gen.py` and bash script are modified from the great works of [CodeT5](https://github.com/salesforce/CodeT5).
+### MBPP
+
+1. Run the following script to generate the answer.
+```bash
+model="/path/to/your/model"
+temp=0.2
+max_len=2048
+pred_num=200
+num_seqs_per_iter=2
+
+output_path=preds/MBPP_T${temp}_N${pred_num}
+mbpp_path=data/mbpp.test.jsonl # we provide this file in data/mbpp.test.zip
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+# 500 problems, 63 per GPU if GPU=8
+index=0
+gpu_num=8
+for ((i = 0; i < $gpu_num; i++)); do
+  start_index=$((i * 50))
+  end_index=$(((i + 1) * 50))
+
+  gpu=$((i))
+  echo 'Running process #' ${i} 'from' $start_index 'to' $end_index 'on GPU' ${gpu}
+  ((index++))
+  (
+    CUDA_VISIBLE_DEVICES=$gpu python mbpp_gen.py --model ${model} \
+      --start_index ${start_index} --end_index ${end_index} --temperature ${temp} \
+      --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --mbpp_path ${mbpp_path}
+  ) &
+  if (($index % $gpu_num == 0)); then wait; fi
+done
+```
+
+3. Run the post processing code `src/process_mbpp.py` to collect the code completions from all answer files.
+```bash
+output_path=preds/MBPP_T${temp}_N${pred_num}
+mbpp_path=data/mbpp.test.jsonl # we provide this file in data/mbpp.test.zip
+
+echo 'Output path: '$output_path
+python process_mbpp.py --path ${output_path} --out_path ${output_path}.jsonl --mbpp_path ${mbpp_path} --add_prompt
+```
+
+4. Evaluate the `MBPP_T${temp}_N${pred_num}.jsonl` with [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness).
+
+Acknowledgement: The evaluation code `humaneval_gen.py`, `mbpp_gen.py` and bash scripts are modified from the great works of [CodeT5](https://github.com/salesforce/CodeT5).
 
 ## Citation
 
