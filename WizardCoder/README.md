@@ -9,7 +9,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 ## News
 
 - 🔥 Our **WizardCoder-15B-V1.0** model achieves the **57.3 pass@1** on the [HumanEval Benchmarks](https://github.com/openai/human-eval), which is **22.3** points higher than the SOTA open-source Code LLMs.
-- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support code-related English instructions now.)](https://609897bc57d26711.gradio.app/), [Backup Demo1](https://fb726b12ab2e2113.gradio.app/), [Backup Demo2](https://b63d7cb102d82cd0.gradio.app/), [Backup Demo3](https://f1c647bd928b6181.gradio.app/), and [Paper](https://arxiv.org/abs/2306.08568).
+- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support code-related English instructions now.)](https://fa6d89fdc546d594.gradio.app/), [Backup Demo1](https://a7a1ac225062217b.gradio.app/), [Backup Demo2](https://fc4e35bf3ef95f73.gradio.app/), and [Paper](https://arxiv.org/abs/2306.08568).
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
 
