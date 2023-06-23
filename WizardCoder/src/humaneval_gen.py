@@ -90,6 +90,7 @@ def main():
     parser.add_argument('--max_len', type=int, default=512, help="")
     parser.add_argument('--decoding_style', type=str, default='sampling', help="")
     parser.add_argument('--num_seqs_per_iter', type=int, default=50, help='')
+    parser.add_argument('--greedy_decode', action='store_true', help='')
     parser.add_argument('--overwrite', action='store_true', help='')
 
     args = parser.parse_args()
@@ -109,7 +110,7 @@ def main():
     tokenizer, model = get_model(base_model=args.model)
     generation_config = GenerationConfig(
         pad_token_id=tokenizer.pad_token_id,
-        do_sample=True,
+        do_sample=False if args.greedy_decode else True,
         temperature=args.temperature,
         max_length=args.max_len,
         num_return_sequences=args.num_seqs_per_iter,
@@ -142,11 +143,10 @@ def main():
         for _ in tqdm(range(loops), total=loops, leave=False, ncols=0):
 
             with torch.no_grad():
-                if args.decoding_style == 'sampling':
-                    gen_tokens = model.generate(
-                        **encoding,
-                        generation_config=generation_config
-                    )
+                gen_tokens = model.generate(
+                    **encoding,
+                    generation_config=generation_config
+                )
 
             if gen_tokens is not None:
                 gen_seqs = tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
