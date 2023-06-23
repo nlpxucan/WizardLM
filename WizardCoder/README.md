@@ -21,6 +21,8 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 <a ><img src="imgs/pass1.png" alt="WizardCoder" style="width: 86%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
+❗❗❗**Note: This performance is 100% reproducible! If you canot reproduce it, please follow the steps in [Evaluation](#evaluation).**
+
 ❗**Note: In this study, we copy the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a **single attempt**, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding and tests with the same [code](https://github.com/evalplus/evalplus).**
 
 ## Comparing WizardCoder with the Open-Source Models.
@@ -201,6 +203,46 @@ echo 'Output path: '$output_path
 python process_humaneval.py --path ${output_path} --out_path ${output_path}.jsonl --add_prompt
 
 evaluate_functional_correctness ${output_path}.jsonl
+```
+
+### How to Reproduce the 59.8 Pass@1 on HumanEval with Greedy Decoding?
+
+❗❗❗**This performance is 100% reproducible!**
+
+Run the following script to generate the answer with greedy decoding. Then follow the above steps 2 and 3 to get the evaluation result.
+
+❗We also provide the generated codes in `data/humaneval.59.8.gen.zip`
+
+```bash
+model="WizardLM/WizardCoder-15B-V1.0"
+temp=0.0
+max_len=2048
+pred_num=1
+num_seqs_per_iter=1
+
+output_path=preds/T${temp}_N${pred_num}_WizardCoder_Greedy_Decode
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+# 164 problems, 21 per GPU if GPU=8
+index=0
+gpu_num=8
+for ((i = 0; i < $gpu_num; i++)); do
+  start_index=$((i * 21))
+  end_index=$(((i + 1) * 21))
+
+  gpu=$((i))
+  echo 'Running process #' ${i} 'from' $start_index 'to' $end_index 'on GPU' ${gpu}
+  ((index++))
+  (
+    CUDA_VISIBLE_DEVICES=$gpu python humaneval_gen.py --model ${model} \
+      --start_index ${start_index} --end_index ${end_index} --temperature ${temp} \
+      --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --greedy_decode
+  ) &
+  if (($index % $gpu_num == 0)); then wait; fi
+done
 ```
 
 ### MBPP
