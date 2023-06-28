@@ -9,7 +9,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 ## News
 
 - 🔥 Our **WizardCoder-15B-V1.0** model achieves the **57.3 pass@1** on the [HumanEval Benchmarks](https://github.com/openai/human-eval), which is **22.3** points higher than the SOTA open-source Code LLMs.
-- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support code-related English instructions now.)](https://fa6d89fdc546d594.gradio.app/), [Backup Demo1](https://a7a1ac225062217b.gradio.app/), [Backup Demo2](https://fc4e35bf3ef95f73.gradio.app/), and [Paper](https://arxiv.org/abs/2306.08568).
+- 🔥 We released **WizardCoder-15B-V1.0** trained with **78k** evolved code instructions. Please checkout the [Model Weights](https://huggingface.co/WizardLM/WizardCoder-15B-V1.0), [Demo (Only support code-related English instructions now.)](https://e7e16a48b3ed6f9b.gradio.app/), [Backup Demo1](https://8be3f4e8521d3243.gradio.app/), and [Paper](https://arxiv.org/abs/2306.08568).
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
 
@@ -21,7 +21,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 <a ><img src="imgs/pass1.png" alt="WizardCoder" style="width: 86%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
-❗❗❗**Note: This performance is 100% reproducible! If you canot reproduce it, please follow the steps in [Evaluation](#evaluation).**
+❗❗❗**Note: This performance is 100% reproducible! If you cannot reproduce it, please follow the steps in [Evaluation](#evaluation).**
 
 ❗**Note: In this study, we copy the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a **single attempt**, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding and tests with the same [code](https://github.com/evalplus/evalplus).**
 
