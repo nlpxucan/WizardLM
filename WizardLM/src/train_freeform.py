@@ -264,7 +264,9 @@ def train():
     trainer = Trainer(model=model, tokenizer=tokenizer, args=training_args, **data_module)
     model.config.use_cache = False
 
-    trainer.train()
+    # continue training use previous checkpoint
+    # set specific model_args.model_name_or_path as continue training ckpt or set True use the latest ckpt
+    trainer.train(resume_from_checkpoint=model_args.model_name_or_path)
     trainer.save_state()
     safe_save_model_for_hf_trainer(trainer=trainer, output_dir=training_args.output_dir)
 
