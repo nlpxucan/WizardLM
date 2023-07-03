@@ -204,6 +204,34 @@ deepspeed train_freeform.py \
     --fp16 True
 ```
 
+4. Continue-training
+
+Pls execute the following training command:
+```bash
+deepspeed train_freeform.py \
+    --model_name_or_path /path/to/llama-7B/hf \
+    --data_path /path/to/alpaca_evol_instruct_70k.json \
+    --output_dir /path/to/wizardlm-7B/hf/ft \
+    --num_train_epochs 3 \
+    --model_max_length 2048 \
+    --per_device_train_batch_size 8 \
+    --per_device_eval_batch_size 1 \
+    --gradient_accumulation_steps 1 \
+    --evaluation_strategy "no" \
+    --save_strategy "steps" \
+    --save_steps 800 \
+    --save_total_limit 3 \
+    --learning_rate 2e-5 \
+    --warmup_steps 2 \
+    --logging_steps 2 \
+    --lr_scheduler_type "cosine" \
+    --report_to "tensorboard" \
+    --gradient_checkpointing True \
+    --continue_train_ckpt_path /path/to/continue_training_ckpt \
+    --deepspeed configs/deepspeed_config.json \
+    --fp16 True
+```
+
 ## Distributed Fine-tuning
 See [Distributed Fine-tuning](./doc/distributed_finetune.md)
 

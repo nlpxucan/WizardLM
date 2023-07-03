@@ -42,6 +42,7 @@ PROMPT_DICT = {
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
+    continue_train_ckpt_path: Optional[str] = field(default=None)
 
 
 @dataclass
@@ -70,9 +71,9 @@ def safe_save_model_for_hf_trainer(trainer: transformers.Trainer, output_dir: st
 
 
 def smart_tokenizer_and_embedding_resize(
-    special_tokens_dict: Dict,
-    tokenizer: transformers.PreTrainedTokenizer,
-    model: transformers.PreTrainedModel,
+        special_tokens_dict: Dict,
+        tokenizer: transformers.PreTrainedTokenizer,
+        model: transformers.PreTrainedModel,
 ):
     """Resize tokenizer and embedding.
 
@@ -117,9 +118,9 @@ def _tokenize_fn(strings: Sequence[str], tokenizer: transformers.PreTrainedToken
 
 
 def preprocess(
-    sources: Sequence[str],
-    targets: Sequence[str],
-    tokenizer: transformers.PreTrainedTokenizer,
+        sources: Sequence[str],
+        targets: Sequence[str],
+        tokenizer: transformers.PreTrainedTokenizer,
 ) -> Dict:
     """Preprocess the data by tokenizing."""
     examples = [s + t for s, t in zip(sources, targets)]
@@ -171,7 +172,7 @@ class SupervisedComplexDataset(Dataset):
         list_data_dict = []
 
         with open(data_path) as f:
-            for line in f:    
+            for line in f:
                 cur_obj = json.loads(line)
                 cur_obj = json.loads(cur_obj)
                 list_data_dict.append(cur_obj)
@@ -183,7 +184,7 @@ class SupervisedComplexDataset(Dataset):
         ]
         targets = [f"{example['output']}{tokenizer.eos_token}" for example in list_data_dict]
 
-       
+
         logging.warning("Tokenizing inputs... This may take some time...")
         data_dict = preprocess(sources, targets, tokenizer)
 
@@ -228,7 +229,7 @@ def make_supervised_data_module(tokenizer: transformers.PreTrainedTokenizer, dat
 def train():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
-        
+
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
@@ -265,8 +266,12 @@ def train():
     model.config.use_cache = False
 
     # continue training use previous checkpoint
-    # set specific model_args.model_name_or_path as continue training ckpt or set True use the latest ckpt
-    trainer.train(resume_from_checkpoint=model_args.model_name_or_path)
+    # set specific model_args.continue_train_ckpt_path as continue training ckpt or set True use the latest ckpt
+    if model_args.continue_train_ckpt_path:
+        trainer.train(resume_from_checkpoint=model_args.continue_train_ckpt_path)
+    else:
+        trainer.train()
+
     trainer.save_state()
     safe_save_model_for_hf_trainer(trainer=trainer, output_dir=training_args.output_dir)
 
