@@ -1,0 +1,2 @@
+ip_address_of_main_node slots=num_of_gpus_in_each_node
+ip_address_of_sub_node1 slots=num_of_gpus_in_each_node
