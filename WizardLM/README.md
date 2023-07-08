@@ -164,7 +164,7 @@ python src/weight_diff_wizard.py recover --path_raw <path_to_step_1_dir> --path_
 
 ## Fine-tuning
 
-We fine-tune WizardLM using code from [Llama-X](https://github.com/AetherCortex/Llama-X).
+We fine-tune WizardLM using code from [WizardLM Training](https://github.com/nlpxucan/WizardLM/tree/main/training).
 We fine-tune LLaMA-7B and LLaMA-13B with the following hyperparameters:
 
 | Hyperparameter | LLaMA-7B | LLaMA-13B|
