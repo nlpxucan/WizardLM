@@ -282,7 +282,7 @@ for ((i = 0; i < $gpu_num; i++)); do
 done
 ```
 
-3. Run the post processing code `src/process_mbpp.py` to collect the code completions from all answer files.
+2. Run the post processing code `src/process_mbpp.py` to collect the code completions from all answer files.
 ```bash
 output_path=preds/MBPP_T${temp}_N${pred_num}
 mbpp_path=data/mbpp.test.jsonl # we provide this file in data/mbpp.test.zip
@@ -291,7 +291,7 @@ echo 'Output path: '$output_path
 python process_mbpp.py --path ${output_path} --out_path ${output_path}.jsonl --mbpp_path ${mbpp_path} --add_prompt
 ```
 
-4. Evaluate the `MBPP_T${temp}_N${pred_num}.jsonl` with [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness).
+3. Evaluate the `MBPP_T${temp}_N${pred_num}.jsonl` with [bigcode-evaluation-harness](https://github.com/bigcode-project/bigcode-evaluation-harness).
 
 Acknowledgement: The evaluation code `humaneval_gen.py`, `mbpp_gen.py` and bash scripts are modified from the great works of [CodeT5](https://github.com/salesforce/CodeT5).
 
