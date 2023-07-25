@@ -13,7 +13,7 @@ Empowering Large Pre-Trained Language Models to Follow Complex Instructions
 
 At present, our core contributors are preparing the **65B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 
-- 🔥🔥🔥 [7/25/2023] We released **WizardLM V1.2** models. The **WizardLM-13B-V1.2** is here ([Demo_13B-V1.2](https://b7a19878988c8c73.gradio.app), [Demo_13B-V1.2_bak-1](https://d0a37a76e0ac4b52.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-13B-V1.2)). **WizardLM-7B-V1.2**,  and **WizardLM-65B-V1.2** are coming soon. Please checkout the [Full Model Weights](https://huggingface.co/WizardLM) and [paper](https://arxiv.org/abs/2304.12244).
+- 🔥🔥🔥 [7/25/2023] We released **WizardLM V1.2** models. The **WizardLM-13B-V1.2** is here ([Demo_13B-V1.2](https://b7a19878988c8c73.gradio.app), [Demo_13B-V1.2_bak-1](https://d0a37a76e0ac4b52.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-13B-V1.2)). **WizardLM-7B-V1.2**,  and **WizardLM-70B-V1.0** are coming soon.
 - 🔥🔥🔥 [7/25/2023] The **WizardLM-13B-V1.2** achieves **7.06** on [MT-Bench Leaderboard](https://chat.lmsys.org/?leaderboard), **89.17%** on [AlpacaEval Leaderboard](https://tatsu-lab.github.io/alpaca_eval/), and **101.4%** on [WizardLM Eval](https://github.com/nlpxucan/WizardLM/blob/main/WizardLM/data/WizardLM_testset.jsonl). (**Note: MT-Bench and AlpacaEval are all self-test, will push update and request review. All tests are completed under their official settings.**)
 
 
