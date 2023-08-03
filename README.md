@@ -16,7 +16,8 @@
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/DATA_LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-
+<font size=0.5>
+    
 | Model | Checkpoint | Paper |MT-Bench | AlpacaEval | WizardEval | HumanEval  | License|
 | ----- |------| ---- |------|-------| ----- | ----- | ----- |
 | WizardLM-13B-V1.2 | 🤗 <a href="https://huggingface.co/WizardLM/WizardLM-13B-V1.2" target="_blank">HF Link</a> | |  |  |  |
@@ -25,7 +26,7 @@
 | WizardLM-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardLM-13B-V1.0" target="_blank">HF Link</a>  |  |  |  |  |
 | WizardLM-7B-V1.0 |  🤗 <a href="https://huggingface.co/WizardLM/WizardLM-7B-V1.0" target="_blank">HF Link</a>  | 📃 <a href="https://arxiv.org/abs/2304.12244" target="_blank">[WizardLM]</a> |  |  |  |
 | WizardCoder-15B-V1.0 |  🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0" target="_blank">HF Link</a>  | 📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a> |  |  | |
-
+</font>
 
 
 
