@@ -5,7 +5,7 @@
 🤗 <a href="https://huggingface.co/WizardLM" target="_blank">HF Repo</a> • 🐦 <a href="https://twitter.com/WizardLM_AI" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.12244" target="_blank">[WizardLM]</a>  • 📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  <br>
 </p>
 <p align="center">
-    👋 Join our <a href="https://discord.gg/bpmeZD7V" target="_blank">Discord</a>
+    👋 Join our <a href="https://discord.gg/VZjjHtWrKs" target="_blank">Discord</a>
 </p>
 
 <p align="center" width="100%">
