@@ -35,7 +35,6 @@
 
 ## News
 
-At present, our core contributors are preparing the **65B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
 - 🔥🔥🔥 [08/09/2023] We released **WizardLM-70B-V1.0** model. Demo is here ([Demo_70B-V1.0](), [Demo_70B-V1.0_bak-1](https://d0a37a76e0ac4b52.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0)). Please checkout the [paper](https://arxiv.org/abs/2304.12244).
 
 - 🔥 [7/25/2023] We released **WizardLM V1.2** models.
