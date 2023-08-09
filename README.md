@@ -35,7 +35,7 @@
 
 ## News
 
-- 🔥🔥🔥 [08/09/2023] We released **WizardLM-70B-V1.0** model. Demo is here ([Demo_70B-V1.0](), [Demo_70B-V1.0_bak-1](https://d0a37a76e0ac4b52.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0)). Please checkout the [paper](https://arxiv.org/abs/2304.12244).
+- 🔥🔥🔥 [08/09/2023] We released **WizardLM-70B-V1.0** model. Demo is here [Demo_70B-V1.0](), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0). 
 
 
 
