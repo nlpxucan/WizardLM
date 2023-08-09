@@ -36,11 +36,9 @@
 ## News
 
 At present, our core contributors are preparing the **65B** version and we expect to empower WizardLM with the ability to perform instruction evolution itself, aiming to evolve your specific data at a low cost.
+- 🔥🔥🔥 [08/09/2023] We released **WizardLM-70B-V1.0** model. Demo is here ([Demo_70B-V1.0](), [Demo_70B-V1.0_bak-1](https://d0a37a76e0ac4b52.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0)). Please checkout the [paper](https://arxiv.org/abs/2304.12244).
 
-- 🔥🔥🔥 [7/25/2023] We released **WizardLM V1.2** models. The **WizardLM-13B-V1.2** is here ([Demo_13B-V1.2](https://215c4ac7fdbf38ec.gradio.app), [Demo_13B-V1.2_bak-1](https://447b774e88af2d2d.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-13B-V1.2)). **WizardLM-7B-V1.2**,  and **WizardLM-70B-V1.0** are coming soon.
-- 🔥🔥🔥 [7/25/2023] The **WizardLM-13B-V1.2** achieves **7.06** on [MT-Bench Leaderboard](https://chat.lmsys.org/?leaderboard), **89.17%** on [AlpacaEval Leaderboard](https://tatsu-lab.github.io/alpaca_eval/), and **101.4%** on [WizardLM Eval](https://github.com/nlpxucan/WizardLM/blob/main/WizardLM/data/WizardLM_testset.jsonl). (**Note: MT-Bench and AlpacaEval are all self-test, will push update and request review. All tests are completed under their official settings.**)
-
-
+- 🔥 [7/25/2023] We released **WizardLM V1.2** models.
 
 - 🔥 we released the latest optimized version of Evol-Instruct training data of WizardLM model. Please refer to [this HuggingFace Repo](https://huggingface.co/datasets/WizardLM/WizardLM_evol_instruct_V2_196k) to download. 
 
@@ -55,23 +53,17 @@ At present, our core contributors are preparing the **65B** version and we expec
 <!-- Although on our **complexity-balanced test set**, **WizardLM-7B has more cases that are preferred by human labelers than ChatGPT** in the high-complexity instructions (difficulty level >= 8), it still lags behind ChatGPT on the entire test set, and we also consider WizardLM to still be in a **baby state**. This repository will **continue to improve WizardLM**, train on larger scales, add more training data, and innovate more advanced large-model training methods. -->
 
 
-<b>Note for 30B and 13B model usage:</b>
+<b>Note for model system prompts usage:</b>
 
-To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our 13B model for inference. Unlike the 7B model, the 13B model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
+To obtain results **identical to our demo**, please strictly follow the prompts and invocation methods provided in the **"src/infer_wizardlm13b.py"** to use our model for inference. Our model adopts the prompt format from <b>Vicuna</b> and supports **multi-turn** conversation.
 
-<b>For WizardLM-13B-V1.0, WizardLM-30B-V1.0 </b>, the Prompt should be as following:
+<b>For WizardLM</b>, the Prompt should be as following:
 
 ```
 A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: hello, who are you? ASSISTANT: 
 ```
 
-<b>For WizardLM-7B-V1.0 </b>, the Prompt should be as following:
-
-```
-"{instruction}\n\n### Response:"
-```
-
-<b>For WizardCoder-15B-V1.0 </b>, the Prompt should be as following:
+<b>For WizardCoder </b>, the Prompt should be as following:
 
 ```
 "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:"
