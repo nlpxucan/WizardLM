@@ -37,15 +37,14 @@
 
 - 🔥🔥🔥 [08/09/2023] We released **WizardLM-70B-V1.0** model. Demo is here ([Demo_70B-V1.0](), [Demo_70B-V1.0_bak-1](https://d0a37a76e0ac4b52.gradio.app/), [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0)). Please checkout the [paper](https://arxiv.org/abs/2304.12244).
 
-- 🔥 [7/25/2023] We released **WizardLM V1.2** models.
+- [7/25/2023] We released **WizardLM V1.2** models.
 
-- 🔥 we released the latest optimized version of Evol-Instruct training data of WizardLM model. Please refer to [this HuggingFace Repo](https://huggingface.co/datasets/WizardLM/WizardLM_evol_instruct_V2_196k) to download. 
+- we released the latest optimized version of Evol-Instruct training data of WizardLM model. Please refer to [this HuggingFace Repo](https://huggingface.co/datasets/WizardLM/WizardLM_evol_instruct_V2_196k) to download. 
 
-- 🔥 We released **WizardCoder-15B-V1.0** (trained with **78k** evolved code instructions), which surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval). For more details ([Paper](https://arxiv.org/abs/2306.08568), [Demo (Only support code-related English instructions now.)](https://41d6fbcd16627c25.gradio.app/), [Backup Demo1](https://cfb18dadc1051cce.gradio.app/), please refer to [WizardCoder](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder).
+- We released **WizardCoder-15B-V1.0** (trained with **78k** evolved code instructions), which surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval). For more details ([Paper](https://arxiv.org/abs/2306.08568), [Demo (Only support code-related English instructions now.)](https://41d6fbcd16627c25.gradio.app/), [Backup Demo1](https://cfb18dadc1051cce.gradio.app/), please refer to [WizardCoder](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder).
 
-- 🔥 Our WizardLM-13B-V1.0 model achieves the 1st-rank of the opensource models on the [AlpacaEval Leaderboard](https://tatsu-lab.github.io/alpaca_eval/).
-- &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
-- 🔥 We released  **WizardLM-30B-V1.0** ([Demo_30B](https://3a6bbf2cf3f85af1.gradio.app/)) and **WizardLM-13B-V1.0** ([Demo_13B](https://97159fe0d183fa6b.gradio.app/)) trained with **250k** evolved instructions (from ShareGPT), and **WizardLM-7B-V1.0** ([Demo_7B](https://74ecfd89dccaaa08.gradio.app)) trained with **70k** evolved instructions (from Alpaca data). Please checkout the [Delta Weights](https://huggingface.co/WizardLM) and [paper](https://arxiv.org/abs/2304.12244).
+- Our WizardLM-13B-V1.0 model achieves the 1st-rank of the opensource models on the [AlpacaEval Leaderboard](https://tatsu-lab.github.io/alpaca_eval/).
+- We released  **WizardLM-30B-V1.0** ([Demo_30B](https://3a6bbf2cf3f85af1.gradio.app/)) and **WizardLM-13B-V1.0** ([Demo_13B](https://97159fe0d183fa6b.gradio.app/)) trained with **250k** evolved instructions (from ShareGPT), and **WizardLM-7B-V1.0** ([Demo_7B](https://74ecfd89dccaaa08.gradio.app)) trained with **70k** evolved instructions (from Alpaca data). Please checkout the [Delta Weights](https://huggingface.co/WizardLM) and [paper](https://arxiv.org/abs/2304.12244).
 
 - &#x1F4E3; We are looking for highly motivated students to join us as interns to create more intelligent AI together. Please contact caxu@microsoft.com
 
