@@ -30,8 +30,12 @@
 | <sup>WizardCoder-15B-V1.0</sup> | <sup> 🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0" target="_blank">HF Link</a></sup>  | <sup>📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a></sup> |  | ||<sup> 57.3 pass@1 </sup> | <sup> <a href="https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement" target="_blank">OpenRAIL-M</a></sup> |
 </font>
 
-❗We are working with our legal team to request review and publicly release the training data and its contruction scripts of the WizardLM models in accordance with our latest internal policy.
+❗To commen concern about dataset:
 
+Recently, there have been clear changes in the open-source policy and regulations of our overall organization's code, data, and models.
+Despite this, we have still worked hard to obtain opening the weights of the model first, but the data involves stricter auditing and is in review with our legal team .
+Our researchers have no authority to publicly release them without authorization.
+Thank you for your understanding.
 
 ## News
 
