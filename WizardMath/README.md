@@ -5,7 +5,7 @@
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-LLaMA2-yellow)](WizardMath/LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-To develop our WizardMath model, we begin by adapting the Evol-Instruct method specifically for math tasks, like GAM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
+To develop our WizardMath model, we begin with adapting the **Evol-Instruct** and **Reinforcement Learning methods** specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
 
 ## News
 - 🔥 Our **WizardMath-70B-V1.0** model achieves slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
@@ -23,9 +23,11 @@ To develop our WizardMath model, we begin by adapting the Evol-Instruct method s
 
 ❗❗❗**Note: This performance is 100% reproducible! If you cannot reproduce it, please follow the steps in [Evaluation](#evaluation).**
 
-❗❗❗**Note: The scores of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) are 80.8%.**
+❗❗❗**Note: The score of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) is 80.8%.**
 
-The following table clearly demonstrates that our **WizardMath** exhibits a substantial performance advantage over all the open-source models on the GSM8k and MATH benchmarks. ❗ **If you are confused with the different scores of our 7B, 13B and 70B models (54.9, 63.9 and 81.6), please check the Notes.**
+The following table clearly demonstrates that our **WizardMath** exhibits a substantial performance advantage over all the open-source models on the GSM8k and MATH benchmarks. 
+
+❗ **If you are confused with the different scores of our 7B, 13B and 70B models (54.9, 63.9 and 81.6), please check the Notes.**
 
 
 | Model               | GSM8k Pass@1 | MATH Pass@1 |
