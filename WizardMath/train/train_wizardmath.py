@@ -24,7 +24,7 @@ import transformers
 from torch.utils.data import Dataset
 from transformers import Trainer
 from datasets import load_dataset
-import deepspeed
+import utils
 
 IGNORE_INDEX = -100
 DEFAULT_PAD_TOKEN = "[PAD]"
@@ -42,15 +42,9 @@ PROMPT_DICT = {
         "Write a response that appropriately completes the request.\n\n"
         "### Instruction:\n{instruction}\n\n### Response:"
     ),
-    "prompt_no_input_fewshot": (
-        "Below is an instruction that describes a task. "
-        "Write a response that appropriately completes the request.\n\n"
-        "Here are some examples.\n"
-    ),
-
 }
 
-
+###code
 @dataclass
 class ModelArguments:
     model_name_or_path: Optional[str] = field(default="facebook/opt-125m")
@@ -164,38 +158,12 @@ class DataCollatorForSupervisedDataset(object):
 
 def train_tokenize_function(examples, tokenizer):
     prompt_input, prompt_no_input = PROMPT_DICT["prompt_input"], PROMPT_DICT["prompt_no_input"]
-    prompt_no_input_fewshot = PROMPT_DICT["prompt_no_input_fewshot"]
-    print('examples.keys() length====', len(examples.keys()))
-    if 'input' in examples and 'data_type' not in examples:
-        sources = []
-        for instruction, input in zip(examples['instruction'], examples['input']):
-            if input != "":
-                problem_prompt = prompt_input.format_map(dict(instruction=instruction, input=input))
-            else:
-                problem_prompt = prompt_no_input.format_map(dict(instruction=instruction))
-            sources.append(problem_prompt)
-
-    elif 'input' in examples and 'data_type' in examples:
-        sources = []
-        for instruction, input, data_type in zip(examples['instruction'], examples['input'], examples['data_type']):
-            if input != "" and data_type == None:
-                problem_prompt = prompt_input.format_map(dict(instruction=instruction, input=input))
-            elif input == "" and data_type == None:
-                problem_prompt = prompt_no_input.format_map(dict(instruction=instruction))
-            elif input == "" and data_type == 'few_shot':
-                problem_prompt = prompt_no_input_fewshot + instruction
-
-            sources.append(problem_prompt)
-    elif 'input' not in examples and 'data_type' in examples:
-        sources = []
-        for instruction, data_type in zip(examples['instruction'], examples['data_type']):
-            if data_type == None:
-                problem_prompt = prompt_no_input.format_map(dict(instruction=instruction))
-            elif data_type == 'few_shot':
-                problem_prompt = prompt_no_input_fewshot + instruction
-
-            sources.append(problem_prompt)
-
+    if 'input' in examples:
+        sources = [
+            prompt_input.format_map(dict(instruction=instruction, input=input)) if input != "" \
+            else prompt_no_input.format_map(dict(instruction=instruction)) \
+            for instruction, input in zip(examples['instruction'], examples['input']) 
+        ]
     else:
         sources = [
             prompt_no_input.format_map(dict(instruction=instruction)) \
@@ -208,11 +176,12 @@ def train_tokenize_function(examples, tokenizer):
 def train():
     parser = transformers.HfArgumentParser((ModelArguments, DataArguments, TrainingArguments))
     model_args, data_args, training_args = parser.parse_args_into_dataclasses()
+        
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
     )
-    #model = model.to_bettertransformer()
+
     tokenizer = transformers.AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=training_args.cache_dir,
@@ -234,6 +203,7 @@ def train():
                 "unk_token": DEFAULT_UNK_TOKEN,
             }
         )
+
     raw_train_datasets = load_dataset('json', data_files=data_args.data_path, split="train", cache_dir=training_args.cache_dir)
     if training_args.local_rank > 0: 
         torch.distributed.barrier()
@@ -260,6 +230,7 @@ def train():
     data_collator = DataCollatorForSupervisedDataset(tokenizer=tokenizer)
     data_module = dict(train_dataset=train_dataset, eval_dataset=None, data_collator=data_collator)
 
+    #Tell Trainer not to attempt DataParallel
     model.is_parallelizable = True
     model.model_parallel = True
 
