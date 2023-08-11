@@ -5,28 +5,35 @@
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-LLaMA2-yellow)](WizardMath/LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-To develop our WizardMath model, we begin by adapting the Evol-Instruct method specifically for math tasks, like GAM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
+To develop our WizardMath model, we begin with adapting the **Evol-Instruct** and **Reinforcement Learning methods** specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
 
 ## News
-- 🔥 Our **WizardMath-70B-V1.0** model slightly outperforms some closed-source LLMs on the GSM8K, including ChatGPT, Claude Instant, PaLM 2 540B.
-- 🔥 Our **WizardMath-70B-V1.0** model achieves the **81.58 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLMs.
-- 🔥 Our **WizardMath-70B-V1.0** model achieves the **22.72 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLMs.
-- &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
+- 🔥 Our **WizardMath-70B-V1.0** model slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
+- 🔥 Our **WizardMath-70B-V1.0** model achieves  **81.6 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLM.
+- 🔥 Our **WizardMath-70B-V1.0** model achieves  **22.7 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLM.
+
+| Model | Checkpoint | Paper  | GSM8k | MATH  | License|
+| ----- |------| ---- |------|-------| ----- |
+| WizardMath-70B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-70B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **81.6**  |  **22.7**	  | <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
+| WizardMath-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-13B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **63.9**  |  **14.0**	  | <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
+| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃Coming Soon| 	 **54.9**  |  **10.7** |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a>|
 
 
 ## Comparing WizardMath with the LLM models.
 
-🔥 The following figure shows that our **WizardMath attains the fifth position in this GSM8k benchmark**, surpassing Claude Instant (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7). Notably, our model exhibits a substantially smaller size compared to these models.
+🔥 The following figure shows that our **WizardMath attains the fifth position on the GSM8k benchmark**, surpassing **Claude Instant 1 (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7)**. Notably, our model exhibits a substantially smaller size compared to these models.
 
 <p align="center" width="100%">
-<a ><img src="imags/wizardmath_gsm8k.png" alt="WizardMath" style="width: 99%; min-width: 300px; display: block; margin: auto;"></a>
+<a ><img src="images/wizardmath_gsm8k.png" alt="WizardMath" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
 </p>
 
 ❗❗❗**Note: This performance is 100% reproducible! If you cannot reproduce it, please follow the steps in [Evaluation](#evaluation).**
 
-❗❗❗**Note: The scores of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) are 80.8%.**
+❗❗❗**Note: The score of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) is 80.8%.**
 
-The following table clearly demonstrates that our **WizardMath** exhibits a substantial performance advantage over all the open-source models on the GSM8k and MATH benchmarks. ❗ **If you are confused with the different scores of our 7B, 13B and 70B models (54.9, 63.9 and 81.6), please check the Notes.**
+The following table clearly demonstrates that our **WizardMath** exhibits a substantial performance advantage over all the open-source models on the GSM8k and MATH benchmarks. 
+
+❗ **If you are confused with the different scores of our 7B, 13B and 70B models (54.9, 63.9 and 81.6), please check the Notes.**
 
 
 | Model               | GSM8k Pass@1 | MATH Pass@1 |
@@ -60,24 +67,19 @@ The following table clearly demonstrates that our **WizardMath** exhibits a subs
 
 ## Contents
 
-1. [Online Demo](#online-demo)
 
-2. [Fine-tuning](#fine-tuning)
 
-3. [Inference](#inference)
+1. [Fine-tuning](#fine-tuning)
 
-4. [Evaluation](#evaluation)
+2. [Inference](#inference)
 
-5. [Citation](#citation)
+3. [Evaluation](#evaluation)
 
-6. [Disclaimer](#disclaimer)
+4. [Citation](#citation)
 
-## Online Demo
+5. [Disclaimer](#disclaimer)
 
-The online demo will be coming soon!
-<!-- We will provide our latest models for you to try for as long as possible. If you find a link is not working, maybe there are a lot of people visiting at the same time, so please be patient ! -->
 
-[Demo Link](xxxxxx)
 
 ## Fine-tuning
 
@@ -131,12 +133,13 @@ We provide the decoding script for WizardMath, which reads a input file and gene
 ###  Install Inference environment :
 Note: We used vllm for inference which can speed up inference and save time. Please refer to the official github [vllm](https://github.com/vllm-project/vllm/tree/main) for questions about vllm installation.
 ```bash
-conda create -n wizardmath python=3.10 -y
+conda create -n wizardmath python=3.8 -y
 conda activate wizardmath
 pip install vllm
 pip install jsonlines
 pip install Fraction
 pip install openai
+cd WizardMath
 ```
 
 ## Evaluation
@@ -165,7 +168,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 
 2. Run the following script to generate the answer.
 ```bash
-python gsm8k_test_wizardmath.py --data_files WizardMath/data/gsm8k_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 60 --tensor_parallel_size 1
+python inference/gsm8k_inference.py --data_file data/gsm8k_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 60 --tensor_parallel_size 1
 ```
 You can specify `tensor_parallel_size` , which indicates the number of gpus. You are able to slice the datasets using the `start` and `end`.
 
@@ -181,7 +184,7 @@ You can specify `tensor_parallel_size` , which indicates the number of gpus. You
 
 2. Run the following script to generate the answer.
 ```bash
-python MATH_test_wizardmath.py --data_files WizardMath/data/MATH_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 50 --tensor_parallel_size 1
+python inference/MATH_inference.py --data_file data/MATH_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 50 --tensor_parallel_size 1
 ```
 You can specify `tensor_parallel_size` , which indicates the number of gpus. You are able to slice the datasets using the `start` and `end`.
 
@@ -189,5 +192,3 @@ You can specify `tensor_parallel_size` , which indicates the number of gpus. You
 ## Disclaimer
 
 WizardMath model follows the same license as LLaMA 2. The content produced by any version of WizardMath is influenced by uncontrollable variables such as randomness, and therefore, the accuracy of the output cannot be guaranteed by this project. This project does not accept any legal liability for the content of the model output, nor does it assume responsibility for any losses incurred due to the use of associated resources and output results.
-
-
