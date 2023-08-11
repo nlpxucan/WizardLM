@@ -8,6 +8,7 @@
 To develop our WizardMath model, we begin with adapting the **Evol-Instruct** and **Reinforcement Learning methods** specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
 
 ## News
+
 - 🔥 Our **WizardMath-70B-V1.0** model achieves slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **81.6 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLM.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **22.7 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLM.
@@ -108,7 +109,7 @@ deepspeed train_wizardmath.py \
     --data_path  "/your/path/to/math_instruction_data.json"\
     --output_dir  "/your/path/to/save_ckpt"\
     --num_train_epochs 3 \
-    --model_max_length 1536 \
+    --model_max_length 2048 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 1 \
@@ -139,6 +140,7 @@ pip install vllm
 pip install jsonlines
 pip install Fraction
 pip install openai
+cd WizardMath
 ```
 
 ## Evaluation
@@ -167,7 +169,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 
 2. Run the following script to generate the answer.
 ```bash
-python gsm8k_test_wizardmath.py --data_files WizardMath/data/gsm8k_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 60 --tensor_parallel_size 1
+python inference/gsm8k_inference.py --data_file data/gsm8k_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 60 --tensor_parallel_size 1
 ```
 You can specify `tensor_parallel_size` , which indicates the number of gpus. You are able to slice the datasets using the `start` and `end`.
 
@@ -183,7 +185,7 @@ You can specify `tensor_parallel_size` , which indicates the number of gpus. You
 
 2. Run the following script to generate the answer.
 ```bash
-python MATH_test_wizardmath.py --data_files WizardMath/data/MATH_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 50 --tensor_parallel_size 1
+python inference/MATH_inference.py --data_file data/MATH_test.jsonl --model "/your/path/to/load_ckpt" --batch_size 50 --tensor_parallel_size 1
 ```
 You can specify `tensor_parallel_size` , which indicates the number of gpus. You are able to slice the datasets using the `start` and `end`.
 
@@ -191,5 +193,3 @@ You can specify `tensor_parallel_size` , which indicates the number of gpus. You
 ## Disclaimer
 
 WizardMath model follows the same license as LLaMA 2. The content produced by any version of WizardMath is influenced by uncontrollable variables such as randomness, and therefore, the accuracy of the output cannot be guaranteed by this project. This project does not accept any legal liability for the content of the model output, nor does it assume responsibility for any losses incurred due to the use of associated resources and output results.
-
-
