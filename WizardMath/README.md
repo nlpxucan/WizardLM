@@ -8,15 +8,14 @@
 To develop our WizardMath model, we begin by adapting the Evol-Instruct method specifically for math tasks, like GAM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
 
 ## News
-- 🔥 Our **WizardMath-70B-V1.0** model achieves slightly outperforms some closed-source LLMs on the GSM8K, including ChatGPT, Claude Instant, PaLM 2 540B.
-- 🔥 Our **WizardMath-70B-V1.0** model achieves the **81.58 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLMs.
-- 🔥 Our **WizardMath-70B-V1.0** model achieves the **22.72 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLMs.
-- &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
+- 🔥 Our **WizardMath-70B-V1.0** model achieves slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
+- 🔥 Our **WizardMath-70B-V1.0** model achieves  **81.58 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLM.
+- 🔥 Our **WizardMath-70B-V1.0** model achieves  **22.72 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLM.
 
 
 ## Comparing WizardMath with the LLM models.
 
-🔥 The following figure shows that our **WizardMath attains the fifth position in this GSM8k benchmark**, surpassing Claude Instant (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7). Notably, our model exhibits a substantially smaller size compared to these models.
+🔥 The following figure shows that our **WizardMath attains the fifth position in the GSM8k benchmark**, surpassing Claude Instant 1 (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7). Notably, our model exhibits a substantially smaller size compared to these models.
 
 <p align="center" width="100%">
 <a ><img src="imags/wizardmath_gsm8k.png" alt="WizardMath" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
