@@ -15,7 +15,7 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ## Comparing WizardMath with the LLM models.
 
-🔥 The following figure shows that our **WizardMath attains the fifth position in the GSM8k benchmark**, surpassing Claude Instant 1 (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7). Notably, our model exhibits a substantially smaller size compared to these models.
+🔥 The following figure shows that our **WizardMath attains the fifth position on the GSM8k benchmark**, surpassing **Claude Instant 1 (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7)**. Notably, our model exhibits a substantially smaller size compared to these models.
 
 <p align="center" width="100%">
 <a ><img src="imags/wizardmath_gsm8k.png" alt="WizardMath" style="width: 100%; min-width: 300px; display: block; margin: auto;"></a>
