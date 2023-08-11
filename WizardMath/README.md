@@ -60,23 +60,19 @@ The following table clearly demonstrates that our **WizardMath** exhibits a subs
 
 ## Contents
 
-1. [Online Demo](#online-demo)
 
-2. [Fine-tuning](#fine-tuning)
 
-3. [Inference](#inference)
+1. [Fine-tuning](#fine-tuning)
 
-4. [Evaluation](#evaluation)
+2. [Inference](#inference)
 
-5. [Citation](#citation)
+3. [Evaluation](#evaluation)
 
-6. [Disclaimer](#disclaimer)
+4. [Citation](#citation)
 
-## Online Demo
+5. [Disclaimer](#disclaimer)
 
-We will provide our latest models for you to try for as long as possible. If you find a link is not working, maybe there are a lot of people visiting at the same time, so please be patient !
 
-[Demo Link](xxxxxx)
 
 ## Fine-tuning
 
