@@ -32,7 +32,7 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ❗❗❗**Note: The score of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) is 80.8%.**
 
-❗<b>Note for model system prompts usage:</b>
+❗<b>If you want to build a WizardMath demo, note for model system prompts usage:</b>
 
 **Default version:**
 
