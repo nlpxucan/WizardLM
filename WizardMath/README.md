@@ -34,6 +34,8 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ❗<b>Note for model system prompts usage:</b>
 
+**Default version:**
+
 ```
 Below is an instruction that describes a task. Write a response that appropriately completes the request.
 
