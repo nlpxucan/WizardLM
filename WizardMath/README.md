@@ -32,6 +32,33 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ❗❗❗**Note: The score of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) is 80.8%.**
 
+❗<b>Note for model system prompts usage:</b>
+
+```
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+
+### Instruction:
+{instruction}
+
+
+### Response: 
+```
+
+## CoT Version:
+
+```
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+
+### Instruction:
+{instruction}
+
+
+### Response: Let's think step by step.
+```
+
+
 The following table clearly demonstrates that our **WizardMath** exhibits a substantial performance advantage over all the open-source models on the GSM8k and MATH benchmarks. 
 
 ❗ **If you are confused with the different scores of our 7B, 13B and 70B models (54.9, 63.9 and 81.6), please check the Notes.**
