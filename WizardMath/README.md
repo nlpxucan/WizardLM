@@ -148,7 +148,7 @@ deepspeed train_wizardmath.py \
 
 We provide the decoding script for WizardMath, which reads a input file and generates corresponding responses for each sample, and finally calculate the score.
 
-###  Install Inference environment :
+###  Install inference environment :
 Note: We used vllm for inference which can speed up inference and save time. Please refer to the official github [vllm](https://github.com/vllm-project/vllm/tree/main) for questions about vllm installation.
 ```bash
 conda create -n wizardmath python=3.8 -y
