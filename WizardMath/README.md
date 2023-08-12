@@ -9,7 +9,7 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ## News
 
-- 🔥 Our **WizardMath-70B-V1.0** model achieves slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
+- 🔥 Our **WizardMath-70B-V1.0** model slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **81.6 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLM.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **22.7 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLM.
 
@@ -31,6 +31,37 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 ❗❗❗**Note: This performance is 100% reproducible! If you cannot reproduce it, please follow the steps in [Evaluation](#evaluation).**
 
 ❗❗❗**Note: The score of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) is 80.8%.**
+
+❗<b>Note for model system prompts usage:</b>
+
+**Default version:**
+
+```
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+
+### Instruction:
+{instruction}
+
+
+### Response: 
+```
+
+
+**CoT Version:** （❗For the **simple** math questions, we do NOT recommend to use the CoT prompt.） 
+
+
+```
+Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
+
+### Instruction:
+{instruction}
+
+
+### Response: Let's think step by step.
+```
+
 
 The following table clearly demonstrates that our **WizardMath** exhibits a substantial performance advantage over all the open-source models on the GSM8k and MATH benchmarks. 
 
