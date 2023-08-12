@@ -79,6 +79,22 @@ A chat between a curious user and an artificial intelligence assistant. The assi
 "Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:"
 ```
 
+<b>For WizardMath</b>, the Prompts should be as following:
+
+**Default version:**
+
+```
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:"
+```
+
+
+**CoT Version:** （❗For the **simple** math questions, we do NOT recommend to use the CoT prompt.） 
+
+
+```
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response: Let's think step by step."
+```
+
 ### GPT-4 automatic evaluation
 
 We adopt the automatic evaluation framework based on GPT-4 proposed by FastChat to assess the performance of chatbot models. As shown in the following figure, WizardLM-30B achieved better results than Guanaco-65B. 
