@@ -45,7 +45,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 ### Response: 
 ```
 
-## CoT Version:
+**CoT Version:**
 
 ```
 Below is an instruction that describes a task. Write a response that appropriately completes the request.
