@@ -17,7 +17,12 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 | ----- |------| ---- |------|-------| ----- | ----- |
 | WizardMath-70B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-70B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **81.6**  |  **22.7**	|| <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
 | WizardMath-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-13B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **63.9**  |  **14.0** |	  | <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
-| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃Coming Soon| 	 **54.9**  |  **10.7** | [Demo-1](http://777957f.r10.cpolar.top), [Demo-2](http://2be2671b.r10.cpolar.top)      |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a>|
+| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃Coming Soon| 	 **54.9**  |  **10.7** | [Demo-1](http://777957f.r10.cpolar.top), [Demo-2](http://2be2671b.r10.cpolar.top)      |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a
+
+❗To commen concern about dataset:
+
+Recently, there have been clear changes in the open-source policy and regulations of our overall organization's code, data, and models. Despite this, we have still worked hard to obtain opening the weights of the model first, but the data involves stricter auditing and is in review with our legal team . Our researchers have no authority to publicly release them without authorization. Thank you for your understanding.                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                             
 
 ## Comparing WizardMath with the LLM models.
 
