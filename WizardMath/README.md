@@ -45,7 +45,9 @@ Below is an instruction that describes a task. Write a response that appropriate
 ### Response: 
 ```
 
-**CoT Version:**
+
+**CoT Version:** （❗For the **simple** math questions, we do NOT recommend to use the CoT prompt.） 
+
 
 ```
 Below is an instruction that describes a task. Write a response that appropriately completes the request.
