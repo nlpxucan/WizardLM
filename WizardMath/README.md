@@ -13,12 +13,11 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **81.6 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLM.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **22.7 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLM.
 
-| Model | Checkpoint | Paper  | GSM8k | MATH  | License|
-| ----- |------| ---- |------|-------| ----- |
-| WizardMath-70B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-70B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **81.6**  |  **22.7**	  | <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
-| WizardMath-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-13B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **63.9**  |  **14.0**	  | <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
-| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃Coming Soon| 	 **54.9**  |  **10.7** |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a>|
-
+| Model | Checkpoint | Paper  | GSM8k | MATH  |Online Demo| License|
+| ----- |------| ---- |------|-------| ----- | ----- |
+| WizardMath-70B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-70B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **81.6**  |  **22.7**	|| <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
+| WizardMath-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-13B-V1.0" target="_blank">HF Link</a> |  📃Coming Soon| **63.9**  |  **14.0** |	  | <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a> |
+| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃Coming Soon| 	 **54.9**  |  **10.7** | [Demo-1](http://777957f.r10.cpolar.top), [Demo-2](http://2be2671b.r10.cpolar.top)      |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 License </a>|
 
 ## Comparing WizardMath with the LLM models.
 
