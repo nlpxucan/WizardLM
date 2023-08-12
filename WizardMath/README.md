@@ -147,12 +147,7 @@ cd WizardMath
 
 The inference prompt for our WizardMath is:
 ```
-Below is an instruction that describes a task. Write a response that appropriately completes the request.
-
-### Instruction:
-{instruction}
-
-### Response: Let's think step by step.
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response: Let's think step by step."
 ```
 
 
