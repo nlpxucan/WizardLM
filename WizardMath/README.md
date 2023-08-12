@@ -32,19 +32,12 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ❗❗❗**Note: The score of ChatGPT reported by [Model Selection](https://arxiv.org/pdf/2305.14333v1.pdf) is 80.8%.**
 
-❗<b>Note for model system prompts usage:</b>
+❗❗❗**Note: If you want to build a WizardMath demo, note for model system prompts usage:**
 
 **Default version:**
 
 ```
-Below is an instruction that describes a task. Write a response that appropriately completes the request.
-
-
-### Instruction:
-{instruction}
-
-
-### Response: 
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:"
 ```
 
 
@@ -52,14 +45,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 
 
 ```
-Below is an instruction that describes a task. Write a response that appropriately completes the request.
-
-
-### Instruction:
-{instruction}
-
-
-### Response: Let's think step by step.
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response: Let's think step by step."
 ```
 
 
@@ -162,7 +148,7 @@ deepspeed train_wizardmath.py \
 
 We provide the decoding script for WizardMath, which reads a input file and generates corresponding responses for each sample, and finally calculate the score.
 
-###  Install Inference environment :
+###  Install inference environment :
 Note: We used vllm for inference which can speed up inference and save time. Please refer to the official github [vllm](https://github.com/vllm-project/vllm/tree/main) for questions about vllm installation.
 ```bash
 conda create -n wizardmath python=3.8 -y
