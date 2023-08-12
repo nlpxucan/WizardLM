@@ -70,12 +70,7 @@ To obtain results **identical to our demo**, please strictly follow the prompts 
 <b>For WizardLM</b>, the Prompt should be as following:
 
 ```
-A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions.
-USER: Hi
-ASSISTANT: Hello.
-USER: Who are you?
-ASSISTANT: I am WizardLM.
-......
+A chat between a curious user and an artificial intelligence assistant. The assistant gives helpful, detailed, and polite answers to the user's questions. USER: Hi ASSISTANT: Hello.</s>USER: Who are you? ASSISTANT: I am WizardLM.</s>......
 ```
 
 <b>For WizardCoder </b>, the Prompt should be as following:
