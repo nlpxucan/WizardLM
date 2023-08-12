@@ -37,14 +37,7 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 **Default version:**
 
 ```
-Below is an instruction that describes a task. Write a response that appropriately completes the request.
-
-
-### Instruction:
-{instruction}
-
-
-### Response: 
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response:"
 ```
 
 
@@ -52,14 +45,7 @@ Below is an instruction that describes a task. Write a response that appropriate
 
 
 ```
-Below is an instruction that describes a task. Write a response that appropriately completes the request.
-
-
-### Instruction:
-{instruction}
-
-
-### Response: Let's think step by step.
+"Below is an instruction that describes a task. Write a response that appropriately completes the request.\n\n### Instruction:\n{instruction}\n\n### Response: Let's think step by step."
 ```
 
 
