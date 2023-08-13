@@ -5,7 +5,20 @@
 [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-LLaMA2-yellow)](WizardMath/LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
+
+<p align="center">
+🤗 <a href="https://huggingface.co/WizardLM" target="_blank">HF Repo</a> • 🐦 <a href="https://twitter.com/WizardLM_AI" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.12244" target="_blank">[WizardLM]</a>  • 📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  <br>
+</p>
+<p align="center">
+    👋 Join our <a href="https://discord.gg/VZjjHtWrKs" target="_blank">Discord</a>
+</p>
+
+<p align="center" width="100%">
+<a ><img src="../imgs/WizardLM.png" alt="WizardLM" style="width: 20%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
 To develop our WizardMath model, we begin with adapting the **Evol-Instruct** and **Reinforcement Learning methods** specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
+
 
 ## News
 
