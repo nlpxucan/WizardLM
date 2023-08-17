@@ -34,7 +34,7 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 
 ❗To commen concern about dataset:
 
-Recently, there have been clear changes in the open-source policy and regulations of our overall organization's code, data, and models. Despite this, we have still worked hard to obtain opening the weights of the model first, but the data involves stricter auditing and is in review with our legal team . Our researchers have no authority to publicly release them without authorization. Thank you for your understanding.                                                                                                                                                                                                                                                                                                                                                                             
+Recently, there have been clear changes in the open-source policy and regulations of our overall organization's code, data, and models. Despite this, we have still worked hard to obtain opening the weights of the model first, but thecode and data involves stricter auditing and is in review with our legal team . Our researchers have no authority to publicly release them without authorization. Thank you for your understanding.                                                                                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                                                                                              
 
 ## Comparing WizardMath with the LLM models.
@@ -104,7 +104,7 @@ The following table clearly demonstrates that our **WizardMath** exhibits a subs
 
 
 
-1. [Fine-tuning](#fine-tuning)
+1. [Training](#training)
 
 2. [Inference](#inference)
 
@@ -115,11 +115,11 @@ The following table clearly demonstrates that our **WizardMath** exhibits a subs
 5. [Disclaimer](#disclaimer)
 
 
+## Training
+### Supervised fine-tuning
 
-## Supervised fine-tuning
-
-We fine-tune WizardMath using the modified code `WizardMath/train/train_wizardmath.py` from [Llama-X](https://github.com/AetherCortex/Llama-X), which uses the open-source friendly [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE).
-We fine-tune WizardMath-13B with the following hyperparameters:
+We supervised fine-tune WizardMath using the modified code `WizardMath/train/train_wizardmath.py` from [Llama-X](https://github.com/AetherCortex/Llama-X), which uses the open-source friendly [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE).
+We supervised fine-tune WizardMath-13B with the following hyperparameters:
 
 | Hyperparameter | LLaMA 2 13B |
 |----------------|-------------|
@@ -160,6 +160,11 @@ deepspeed train_wizardmath.py \
     --deepspeed config/deepspeed_config.json \
     --fp16 True \
 ```
+### RL training
+
+Recently, there have been clear changes in the open-source policy and regulations of our overall organization's code, data, and models. The data and code involves stricter auditing and is in review with our legal team . Our researchers have no authority to publicly release them without authorization. Thank you for your understanding.
+
+
 
 ## Inference
 
