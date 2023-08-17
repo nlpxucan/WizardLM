@@ -182,7 +182,7 @@ pip install openai
 cd WizardMath
 ```
 
-## Evaluation
+<h2 id="evaluation">Evaluation</h2>
 
 The inference prompt for our WizardMath is:
 ```
@@ -223,7 +223,9 @@ python inference/MATH_inference.py --data_file data/MATH_test.jsonl --model "/yo
 ```
 You can specify `tensor_parallel_size` , which indicates the number of gpus. You are able to slice the datasets using the `start` and `end`.
 
+<h2 id="citation">Citation</h2>
 
-## Disclaimer
+<h2 id="disclaimer">Disclaimer</h2>
+
 
 WizardMath model follows the same license as LLaMA 2. The content produced by any version of WizardMath is influenced by uncontrollable variables such as randomness, and therefore, the accuracy of the output cannot be guaranteed by this project. This project does not accept any legal liability for the content of the model output, nor does it assume responsibility for any losses incurred due to the use of associated resources and output results.
