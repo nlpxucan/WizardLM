@@ -116,9 +116,9 @@ The following table clearly demonstrates that our **WizardMath** exhibits a subs
 
 
 
-## Fine-tuning
+## Supervised fine-tuning
 
-We fine-tune WizardMath using the modified code `WizardMath/train/train_wizardmath.py` from [Llama-X](https://github.com/AetherCortex/Llama-X).
+We fine-tune WizardMath using the modified code `WizardMath/train/train_wizardmath.py` from [Llama-X](https://github.com/AetherCortex/Llama-X), which uses the open-source friendly [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE).
 We fine-tune WizardMath-13B with the following hyperparameters:
 
 | Hyperparameter | LLaMA 2 13B |
