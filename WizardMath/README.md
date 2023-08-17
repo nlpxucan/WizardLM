@@ -114,8 +114,8 @@ The following table clearly demonstrates that our **WizardMath** exhibits a subs
 
 5. [Disclaimer](#disclaimer)
 
+<h2 id="training">Training</h2>
 
-## Training
 ### Supervised fine-tuning
 
 In the SFT stage, we train WizardMath with the code `WizardMath/train/train_wizardmath.py` from [Llama-X](https://github.com/AetherCortex/Llama-X), which uses the open-source friendly [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/stanford_alpaca/blob/main/LICENSE).
@@ -166,7 +166,7 @@ Recently, there have been clear changes in the open-source policy and regulation
 
 
 
-## Inference
+<h2 id="inference">Inference</h2>
 
 We provide the decoding script for WizardMath, which reads a input file and generates corresponding responses for each sample, and finally calculate the score.
 
