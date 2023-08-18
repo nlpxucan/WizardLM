@@ -1,4 +1,4 @@
-# WizardMath : Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct
+# WizardMath : Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct (RLEIF)
 
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](CODE_LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](DATA_LICENSE)
