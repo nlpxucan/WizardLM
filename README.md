@@ -49,7 +49,7 @@ Thanks to the enthusiastic friends, their video introductions are more lively an
 </font>
 
 
-[08/09/2023] We released **WizardLM-70B-V1.0** model. Here is [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0). 
+- [08/09/2023] We released **WizardLM-70B-V1.0** model. Here is [Full Model Weight](https://huggingface.co/WizardLM/WizardLM-70B-V1.0). 
 
 <font size=0.5>
     
