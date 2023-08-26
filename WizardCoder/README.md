@@ -2,26 +2,39 @@
 
 [![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](CODE_LICENSE)
 [![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](DATA_LICENSE)
-[![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-bigscience%20OpenRAIL%20M%20v1-yellow)](MODEL_WEIGHTS_LICENSE)
+<!-- [![Model Weight License](https://img.shields.io/badge/Model%20Weights%20License-bigscience%20OpenRAIL%20M%20v1-yellow)](MODEL_WEIGHTS_LICENSE) -->
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/release/python-390/)
 
-To develop our WizardCoder model, we begin by adapting the Evol-Instruct method specifically for coding tasks. This involves tailoring the prompt to the domain of code-related instructions. Subsequently, we fine-tune the Code LLM, StarCoder, utilizing the newly created instruction-following training set.
+To develop our WizardCoder model, we begin by adapting the Evol-Instruct method specifically for coding tasks. This involves tailoring the prompt to the domain of code-related instructions. Subsequently, we fine-tune the Code LLMs, StarCoder or Code LLama, utilizing the newly created instruction-following training set.
 
 ## News
 
-- We released **WizardCoder-15B-V1.0** , which achieves the **57.3 pass@1** and surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval). For more details, please refer to [WizardCoder](https://github.com/nlpxucan/WizardLM/tree/main/WizardCoder).
+- 🔥🔥🔥[2023/08/26] We released **WizardCoder-Python-34B-V1.0** , which achieves the **73.2 pass@1** and surpasses **GPT4 (2023/03/15)**, **ChatGPT-3.5**, and **Claude2** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+- [2023/06/16] We released **WizardCoder-15B-V1.0** , which achieves the **57.3 pass@1** and surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+
+❗Note: There are two HumanEval results of GPT4 and ChatGPT-3.5. The 67.0 and 48.1 are reported by the official GPT4 Report (2023/03/15) of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 are tested by ourselves with the latest API (2023/08/26).
 
 
 |  Model  |  Checkpoint  | Paper    | HumanEval  |   MBPP | Demo | License |
 | ----- |------| ---- |------|-------| ----- |  ----- | 
-|  WizardCoder-15B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  57.3   |51.8 | |  <a href="https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement" target="_blank">OpenRAIL-M</a>  |
-
-
+|  WizardCoder-Python-34B-V1.0  |   🤗 <a href="" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  73.2   | 61.2 | [Demo (Only English)](http://47.103.63.15:50085/) |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama2</a>  |
+|  WizardCoder-15B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  59.8   |50.6 | -- |  <a href="https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement" target="_blank">OpenRAIL-M</a>  |
 
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
+## Comparing WizardCoder-Python-34B-V1.0 with Other LLMs.
 
-## Comparing WizardCoder with the Closed-Source Models.
+🔥 The following figure shows that our **WizardCoder-Python-34B-V1.0 attains the second position in this benchmark**, surpassing GPT4 (2023/03/15, 73.2 vs. 67.0), ChatGPT-3.5 (73.2 vs. 72.5) and Claude2 (73.2 vs. 71.2).
+
+<p align="center" width="100%">
+<a ><img src="imgs/compare_sota.png" alt="WizardCoder" style="width: 96%; min-width: 300px; display: block; margin: auto;"></a>
+</p>
+
+❗❗❗**Note: This performance is 100% reproducible! If you cannot reproduce it, please follow the steps in [Evaluation](#evaluation).**
+
+❗Note: There are two HumanEval results of GPT4 and ChatGPT-3.5. The 67.0 and 48.1 are reported by the official GPT4 Report (2023/03/15) of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 are tested by ourselves with the latest API (2023/08/26).
+
+## Comparing WizardCoder-15B-V1.0 with the Closed-Source Models.
 
 🔥 The following figure shows that our **WizardCoder attains the third position in this benchmark**, surpassing Claude-Plus (59.8 vs. 53.0) and Bard (59.8 vs. 44.5). Notably, our model exhibits a substantially smaller size compared to these models.
 
@@ -33,7 +46,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 ❗**Note: In this study, we copy the scores for HumanEval and HumanEval+ from the [LLM-Humaneval-Benchmarks](https://github.com/my-other-github-account/llm-humaneval-benchmarks). Notably, all the mentioned models generate code solutions for each problem utilizing a **single attempt**, and the resulting pass rate percentage is reported. Our **WizardCoder** generates answers using greedy decoding and tests with the same [code](https://github.com/evalplus/evalplus).**
 
-## Comparing WizardCoder with the Open-Source Models.
+## Comparing WizardCoder-15B-V1.0 with the Open-Source Models.
 
 The following table clearly demonstrates that our **WizardCoder** exhibits a substantial performance advantage over all the open-source models. ❗**If you are confused with the different scores of our model (57.3 and 59.8), please check the Notes.**
 
@@ -170,7 +183,9 @@ Below is an instruction that describes a task. Write a response that appropriate
 ### HumanEval
 
 1. According to the instructions of [HumanEval](https://github.com/openai/human-eval), install the environment.
-2. Run the following script to generate the answer.
+2. Run the following scripts to generate the answer.
+
+- (1) For WizardCoder-15B-V1.0 (base on StarCoder)
 ```bash
 model="/path/to/your/model"
 temp=0.2
@@ -201,6 +216,29 @@ for ((i = 0; i < $gpu_num; i++)); do
   ) &
   if (($index % $gpu_num == 0)); then wait; fi
 done
+```
+
+- (2) For WizardCoder-Python-34B-V1.0 (base on CodeLLama)
+
+```bash
+pip install vllm # This can acclerate the inference process a lot.
+pip install transformers==4.31.0
+
+model="/path/to/your/model"
+temp=0.2
+max_len=2048
+pred_num=200
+num_seqs_per_iter=2
+
+output_path=preds/T${temp}_N${pred_num}
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python humaneval_gen_vllm.py --model ${model} \
+  --start_index 0 --end_index 164 --temperature ${temp} \
+  --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --num_gpus 4
 ```
 
 3. Run the post processing code `src/process_humaneval.py` to collect the code completions from all answer files.
