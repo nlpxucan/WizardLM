@@ -34,6 +34,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 ❗Our **WizardCoder** generates answers using greedy decoding.
 
+❗There are two results of GPT4 and GPT3.5(ChatGPT). The 67.0 and 48.1 scores are reported by the offcial report of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 scores are tested by ourselves with the latest API (2023/08/26).
 
 ## Comparing WizardCoder-15B-V1.0 with the Closed-Source Models.
 
