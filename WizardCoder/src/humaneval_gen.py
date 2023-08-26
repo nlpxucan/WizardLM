@@ -19,23 +19,9 @@ try:
 except:
     pass
 
-def extract_text(prompt, remove_lines=True):
-    token = '\"\"\"'
-    start = token
-    end = '>>>'
-
-    start_idx = prompt.find(start) + len(start)
-    end_idx = prompt.find(end)
-
-    output = prompt[start_idx: end_idx]
-    if remove_lines:
-        output = output.replace('\n', ' ')
-    output = re.sub(r"\s+", " ", output).strip()
-
-    return output
-
 def generate_prompt(input):
     INSTRUCTION = f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.
+
 
 ### Instruction:
 Create a Python script for this problem:
@@ -97,8 +83,6 @@ def main():
 
     argsdict = vars(args)
     print(pprint.pformat(argsdict))
-
-    STOP_SEQS = ['\nclass', '\ndef', '\n#', '\nif', '\nprint']
 
     problems = read_problems()
 
