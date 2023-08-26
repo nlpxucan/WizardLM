@@ -9,8 +9,10 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 ## News
 
-- 🔥🔥🔥We released **WizardCoder-Python-34B-V1.0** , which achieves the **73.2 pass@1** and slightly surpasses **ChatGPT (+0.7)** and **Claude2 (+2.0)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
-- We released **WizardCoder-15B-V1.0** , which achieves the **57.3 pass@1** and surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+- 🔥🔥🔥[2023/08/26] We released **WizardCoder-Python-34B-V1.0** , which achieves the **73.2 pass@1** and surpasses **GPT4 (2023/03/15)**, **ChatGPT-3.5 (2023/08/26)**, and **Claude2** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+- [2023/06/16] We released **WizardCoder-15B-V1.0** , which achieves the **57.3 pass@1** and surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+
+❗Note: There are two HumanEval results of GPT4 and ChatGPT-3.5. The 67.0 and 48.1 are reported by the official GPT4 Report (2023/03/15) of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 are tested by ourselves with the latest API (2023/08/26).
 
 
 |  Model  |  Checkpoint  | Paper    | HumanEval  |   MBPP | Demo | License |
@@ -22,9 +24,9 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
-## Comparing WizardCoder-Python-V1.0 with Other LLMs.
+## Comparing WizardCoder-Python-34B-V1.0 with Other LLMs.
 
-🔥 The following figure shows that our **WizardCoder-Python-34B-V1.0 attains the second position in this benchmark**, slightly surpassing ChatGPT (73.2 vs. 72.5) and Claude2 (73.2 vs. 71.2).
+🔥 The following figure shows that our **WizardCoder-Python-34B-V1.0 attains the second position in this benchmark**, surpassing GPT4 (2023/03/15, 73.2 vs. 67.0), ChatGPT-3.5 (2023/08/26, 73.2 vs. 72.5) and Claude2 (73.2 vs. 71.2).
 
 <p align="center" width="100%">
 <a ><img src="imgs/compare_sota.png" alt="WizardCoder" style="width: 96%; min-width: 300px; display: block; margin: auto;"></a>
@@ -34,7 +36,7 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 ❗Our **WizardCoder** generates answers using greedy decoding.
 
-❗There are two results of GPT4 and GPT3.5(ChatGPT). The 67.0 and 48.1 scores are reported by the offcial report of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 scores are tested by ourselves with the latest API (2023/08/26).
+❗Note: There are two HumanEval results of GPT4 and ChatGPT-3.5. The 67.0 and 48.1 are reported by the official GPT4 Report (2023/03/15) of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 are tested by ourselves with the latest API (2023/08/26).
 
 ## Comparing WizardCoder-15B-V1.0 with the Closed-Source Models.
 
@@ -220,7 +222,7 @@ for ((i = 0; i < $gpu_num; i++)); do
 done
 ```
 
-- (2) For WizardCoder-Python-V1.0 (base on CodeLLama)
+- (2) For WizardCoder-Python-34B-V1.0 (base on CodeLLama)
 
 ```bash
 pip install vllm # This can acclerate the inference process a lot.
@@ -238,7 +240,7 @@ mkdir -p ${output_path}
 echo 'Output path: '$output_path
 echo 'Model to eval: '$model
 
-CUDA_VISIBLE_DEVICES=0,1,2,3,4 python humaneval_gen_vllm.py --model ${model} \
+CUDA_VISIBLE_DEVICES=0,1,2,3 python humaneval_gen_vllm.py --model ${model} \
   --start_index 0 --end_index 164 --temperature ${temp} \
   --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --num_gpus 4
 ```
