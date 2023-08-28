@@ -1,4 +1,4 @@
-## 一. WizardCoder Inference Demo
+## WizardCoder Inference Demo
 
 We provide the inference demo script for **WizardCoder-Family**.
 
@@ -18,7 +18,7 @@ CUDA_VISIBLE_DEVICES=1,2,3,4 python wizardcoder_demo.py \
 Note: This script supports `WizardLM/WizardCoder-Python-34B/13B/7B-V1.0`. If you want to inference with `WizardLM/WizardCoder-15B/3B/1B-V1.0`, please change the `stop_tokens = ['</s>']` to `stop_tokens = ['<|endoftext|>']` in the script.
 
 
-## 二. WizardMath Inference Demo
+## WizardMath Inference Demo
 
 We provide the inference demo script for **WizardMath-Family**.
 
