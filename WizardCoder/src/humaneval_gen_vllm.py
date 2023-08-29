@@ -62,7 +62,7 @@ def main():
     num_samples = len(prompts)
     print("Number of samples: {}".format(num_samples))
 
-    llm = LLM(base_model, tensor_parallel_size=args.num_gpus)
+    llm = LLM(base_model=args.model, tensor_parallel_size=args.num_gpus)
     sampling_params = SamplingParams(temperature=args.temperature, top_p=1, max_tokens=args.max_len)
 
     print(f"Loaded {args.model}.")
