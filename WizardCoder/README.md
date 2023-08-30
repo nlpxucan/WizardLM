@@ -257,6 +257,8 @@ evaluate_functional_correctness ${output_path}.jsonl
 
 ### How to Reproduce the 73.2 Pass@1 on HumanEval with Greedy Decoding?
 
+❗❗❗**This performance is 100% reproducible!**
+
 - Step 1: Setup the environment
 ```bash
 conda create -n eval python=3.10
@@ -309,6 +311,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python humaneval_gen_vllm.py --model ${model} \
 ```
 
 - Step 5: Get the score
+
 use the code `WizardLM/blob/main/WizardCoder/src/process_humaneval.py` to get the score.
 ```bash
 output_path=preds/T0.0_N1
