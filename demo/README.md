@@ -34,3 +34,20 @@ CUDA_VISIBLE_DEVICES=0 python wizardmath_demo.py \
    --base_model "xxx/path/to/wizardmath_7b_model" \
    --n_gpus 1
 ```
+
+## WizardLM Inference Demo
+
+We provide the inference demo script for **WizardLM-Family**.
+
+1. According to the instructions of [Llama-X](https://github.com/AetherCortex/Llama-X), install the environment.
+2. Install these packages:
+```bash
+pip install transformers==4.31.0
+pip install vllm==0.1.4
+```
+3. Enjoy your demo:
+```bash
+CUDA_VISIBLE_DEVICES=0 python wizardLM_demo.py \
+   --base_model "xxx/path/to/wizardLM_7b_model" \
+   --n_gpus 1
+```
