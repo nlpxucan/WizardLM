@@ -33,7 +33,7 @@ def main(
             prompt = problem_prompt.format(instruction=instruction)
 
         problem_instruction = [prompt]
-        stop_tokens = ['</s>']
+        stop_tokens = ["Instruction:", "Instruction", "Response:", "Response", '</s>']
         sampling_params = SamplingParams(temperature=temperature, top_p=1, max_tokens=max_new_tokens, stop=stop_tokens)
         completions = llm.generate(problem_instruction, sampling_params)
         for output in completions:
