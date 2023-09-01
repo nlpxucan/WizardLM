@@ -60,7 +60,7 @@ def main(
             )
         ],
         title=title,
-        description="Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct"
+        description="Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct, github: https://github.com/nlpxucan/WizardLM, huggingface: https://huggingface.co/WizardLM"
     ).queue().launch(share=False, server_port=port)
 
 if __name__ == "__main__":
