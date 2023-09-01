@@ -55,7 +55,7 @@ def main(
             )
         ],
         title="WizardCoder",
-        description="Empowering Code Large Language Models with Evol-Instruct"
+        description="Empowering Code Large Language Models with Evol-Instruct, github: https://github.com/nlpxucan/WizardLM, huggingface: https://huggingface.co/WizardLM"
     ).queue().launch(share=True, server_port=port)
 
 if __name__ == "__main__":
