@@ -74,7 +74,7 @@ def test_hendrycks_math(model, data_path, start=0, end=MAX_INT, batch_size=1, te
     print('lenght ====', len(hendrycks_math_ins))
     batch_hendrycks_math_ins = batch_data(hendrycks_math_ins, batch_size=batch_size)
 
-    stop_tokens = ["Question:", "Question", "USER:", "USER", "ASSISTANT:", "ASSISTANT", "Instruction:", "Instruction", "Response:", "Response"]
+    stop_tokens = ["Instruction:", "Instruction", "Response:", "Response"]
     sampling_params = SamplingParams(temperature=0, top_p=1, max_tokens=2048, stop=stop_tokens)
     print('sampleing =====', sampling_params)
     llm = LLM(model=model,tensor_parallel_size=tensor_parallel_size)
