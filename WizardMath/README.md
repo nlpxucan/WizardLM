@@ -225,6 +225,16 @@ python inference/MATH_inference.py --data_file data/MATH_test.jsonl --model "/yo
 You can specify `tensor_parallel_size` , which indicates the number of gpus. You are able to slice the datasets using the `start` and `end`.
 
 <h2 id="citation">Citation</h2>
+Please cite the paper if you refer to our model or code or data or paper from WizardMath.
+
+```
+@article{luo2023wizardmath,
+  title={WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct},
+  author={Luo, Haipeng and Sun, Qingfeng and Xu, Can and Zhao, Pu and Lou, Jianguang and Tao, Chongyang and Geng, Xiubo and Lin, Qingwei and Chen, Shifeng and Zhang, Dongmei},
+  journal={arXiv preprint arXiv:2308.09583},
+  year={2023}
+}
+```
 
 <h2 id="disclaimer">Disclaimer</h2>
 
