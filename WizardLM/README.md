@@ -260,13 +260,11 @@ In the high-difficulty section of our test set (difficulty level >= 8), WizardLM
 Please cite the repo if you use the data or code in this repo.
 
 ```
-@misc{xu2023wizardlm,
-      title={WizardLM: Empowering Large Language Models to Follow Complex Instructions}, 
-      author={Can Xu and Qingfeng Sun and Kai Zheng and Xiubo Geng and Pu Zhao and Jiazhan Feng and Chongyang Tao and Daxin Jiang},
-      year={2023},
-      eprint={2304.12244},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@article{xu2023wizardlm,
+  title={Wizardlm: Empowering large language models to follow complex instructions},
+  author={Xu, Can and Sun, Qingfeng and Zheng, Kai and Geng, Xiubo and Zhao, Pu and Feng, Jiazhan and Tao, Chongyang and Jiang, Daxin},
+  journal={arXiv preprint arXiv:2304.12244},
+  year={2023}
 }
 ```
 ## Disclaimer
