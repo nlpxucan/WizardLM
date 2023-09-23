@@ -6,7 +6,7 @@ from depth import createConstraintsPrompt, createDeepenPrompt, createConcretizin
 from breadth import createBreadthPrompt
 
 
-fr = open('alpaca_data_cleaned.json','r')
+fr = open('alpaca_data.json','r')
 
 all_objs = json.load(fr)
 
