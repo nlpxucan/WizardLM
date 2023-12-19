@@ -77,7 +77,10 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
 | **WizardMath-7B-V1.1** |  **83.2**  |  **33.0** |
 
    
-                                                                            
+ ## ❗ Data Contamination Check:
+
+Before model training, we carefully and rigorously checked all the training data, and used multiple deduplication methods to verify and prevent data leakage on GSM8k and MATH test set. 
+                                                                           
                                                                                                                                                                                                                                                                                                                                                                            
 
 ## Comparing WizardMath V1.0 with the LLM models.
