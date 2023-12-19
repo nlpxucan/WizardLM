@@ -22,7 +22,7 @@ To develop our WizardMath model, we begin with adapting the **Evol-Instruct** an
     
 ## News
 
-- [12/19/2023] 🔥 We released **WizardMath-7B-V1.1**, the **SOTA 7B math LLM**, achieves **83.2 pass@1** on GSM8k, and **33.0 pass@1** on MATH.
+- [12/19/2023] 🔥 We released **WizardMath-7B-V1.1** trained from Mistral-7B, the **SOTA 7B math LLM**, achieves **83.2 pass@1** on GSM8k, and **33.0 pass@1** on MATH.
 
 - [12/19/2023] 🔥 **WizardMath-7B-V1.1** outperforms **ChatGPT 3.5**, **Gemini Pro**, **Mixtral MOE**, and **Claude Instant** on GSM8K pass@1.
 
