@@ -19,26 +19,68 @@
 
 To develop our WizardMath model, we begin with adapting the **Evol-Instruct** and **Reinforcement Learning methods** specifically for math tasks, like GSM8k and MATH. This involves tailoring the prompt to the domain of math-related instructions. Subsequently, we fine-tune the LLaMA 2, utilizing the newly created instruction-following math training set.
 
-
+    
 ## News
+
+- [12/19/2023] 🔥 We released **WizardMath-7B-V1.1**, the **SOTA 7B math LLM**, achieves **83.2 pass@1** on GSM8k, and **33.0 pass@1** on MATH.
+
+- [12/19/2023] 🔥 **WizardMath-7B-V1.1** outperforms **ChatGPT 3.5**, **Gemini Pro**, **Mixtral MOE**, and **Claude Instant** on GSM8K pass@1.
+
+- [12/19/2023] 🔥 **WizardMath-7B-V1.1** is comparable with **ChatGPT 3.5**, **Gemini Pro**, and surpasses **Mixtral MOE** on MATH pass@1.
+
 
 - 🔥 Our **WizardMath-70B-V1.0** model slightly outperforms some closed-source LLMs on the GSM8K, including **ChatGPT 3.5**, **Claude Instant 1** and **PaLM 2 540B**.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **81.6 pass@1** on the [GSM8k Benchmarks](https://github.com/openai/grade-school-math), which is **24.8** points higher than the SOTA open-source LLM.
 - 🔥 Our **WizardMath-70B-V1.0** model achieves  **22.7 pass@1** on the [MATH Benchmarks](https://github.com/hendrycks/math), which is **9.2** points higher than the SOTA open-source LLM.
 
-    
 | Model | Checkpoint | Paper  | GSM8k | MATH  |Online Demo| License|
 | ----- |------| ---- |------|-------| ----- | ----- |
-| WizardMath-70B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-70B-V1.0" target="_blank">HF Link</a> |  📃 <a href="https://github.com/nlpxucan/WizardLM/blob/main/WizardMath/WizardMath_Paper.pdf" target="_blank">[WizardMath]</a>| **81.6**  |  **22.7**	|[Demo (only support English)](http://47.103.63.15:50083/)| <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2  </a> |
-| WizardMath-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-13B-V1.0" target="_blank">HF Link</a> |  📃 <a href="https://github.com/nlpxucan/WizardLM/blob/main/WizardMath/WizardMath_Paper.pdf" target="_blank">[WizardMath]</a>| **63.9**  |  **14.0** |[Demo (only support English)](http://47.103.63.15:50082/)| <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 </a> |
-| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃 <a href="https://github.com/nlpxucan/WizardLM/blob/main/WizardMath/WizardMath_Paper.pdf" target="_blank">[WizardMath]</a>| 	 **54.9**  |  **10.7** | [Demo (only support English)](http://47.103.63.15:50080/)|  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2  </a>|
+| **WizardMath-7B-V1.1** | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.1" target="_blank">HF Link</a>  |  📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a>| 	 **83.2**  |  **33.0** | [Demo](http://47.103.63.15:50080/)|  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">  </a>|    
+| WizardMath-70B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-70B-V1.0" target="_blank">HF Link</a> |  📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a>| **81.6**  |  **22.7**	|[Demo](http://47.103.63.15:50083/)| <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2  </a> |
+| WizardMath-13B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-13B-V1.0" target="_blank">HF Link</a> |  📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a>| **63.9**  |  **14.0** |[Demo](http://47.103.63.15:50082/)| <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2 </a> |
+| WizardMath-7B-V1.0 | 🤗 <a href="https://huggingface.co/WizardLM/WizardMath-7B-V1.0" target="_blank">HF Link</a>  |  📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a>| 	 **54.9**  |  **10.7** | [Demo](http://47.103.63.15:50080/)|  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama 2  </a>|    
 
-❗To commen concern about dataset:
+## [12/19/2023] Comparing WizardMath-7B-V1.1 with other open source 7B size math LLMs.
 
-Recently, there have been clear changes in the open-source policy and regulations of our overall organization's code, data, and models. Despite this, we have still worked hard to obtain opening the weights of the model first, but thecode and data involves stricter auditing and is in review with our legal team . Our researchers have no authority to publicly release them without authorization. Thank you for your understanding.                                                                                                                                                                                                                                                                                                                                                                             
-                                                                                                                                                                                                                                                                                                                                                                             
+| Model | GSM8k Pass@1 | MATH Pass@1 |
+| ----- |------| ---- |
+| MPT-7B              | 6.8          | 3.0         |
+|Llama 1-7B          | 11.0         | 2.9         |
+|Llama 2-7b|12.3	|2.8	|
+|Yi-6b| 32.6	|5.8	|
+|Mistral-7b|37.8	|9.1	|
+|Qwen-7b|47.8	|9.3	|
+| RFT-7B              | 50.3         | --          |
+| MAmmoTH-7B (COT)    | 50.5         | 10.4        |
+| WizardMath-7B-V1.0 | 54.9  |  10.7 |
+|Abel-7B-001 |59.7	|13	|
+| MetaMath-7B         | 66.5         | 19.8        |
+| Arithmo-Mistral-7B  | 74.7         | 25.3        |
+|MetaMath-Mistral-7B|77.7	|28.2	|
+|Abel-7B-002 |	80.4 | 29.5	|
+| **WizardMath-7B-V1.1** |  **83.2**  |  **33.0** |
 
-## Comparing WizardMath with the LLM models.
+
+## [12/19/2023] Comparing WizardMath-7B-V1.1 with large open source (30B~70B) LLMs.
+
+| Model | GSM8k Pass@1 | MATH Pass@1 |
+| ----- |------| ---- |
+| Llemma-34B             | 51.5          |   25.0       |
+| Minerva-62B             | 52.4          |  27.6        |
+| Llama 2-70B             | 56.8          |  13.5        |
+|  DeepSeek 67B            | 63.4          |  --        |
+|  Gork 33B            | 62.9          |  23.9       |
+| MAmmoTH-70B             | 72.4          |  21.1       |
+| Yi-34B            | 67.9          |   15.9       |
+| Mixtral 8x7B            | 74.4          |   28.4      |
+|  MetaMath-70B  | 82.3          |   26.6       |
+| **WizardMath-7B-V1.1** |  **83.2**  |  **33.0** |
+
+   
+                                                                            
+                                                                                                                                                                                                                                                                                                                                                                           
+
+## Comparing WizardMath V1.0 with the LLM models.
 
 🔥 The following figure shows that our **WizardMath attains the fifth position on the GSM8k benchmark**, surpassing **Claude Instant 1 (81.6 vs. 80.9), ChatGPT (81.6 vs. 80.8) and PaLM 2 540B (81.6 vs. 80.7)**. Notably, our model exhibits a substantially smaller size compared to these models.
 
