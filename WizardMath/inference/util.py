@@ -1,4 +1,5 @@
 import pprint
+from grader import math_equal
 
 def last_boxed_only(sample):
     q, a = sample
@@ -239,9 +240,13 @@ def is_equiv(str1, str2, verbose=False):
         #pdb.set_trace()
         if verbose:
             print(ss1, ss2)
-        return ss1 == ss2
+        #return ss1 == ss2
+        res = math_equal(ss1,ss2) or ss1 == ss2
+        return res
     except Exception:
-        return str1 == str2
+        #return str1 == str2
+        res = math_equal(str1,str1) or str1 == str2
+        return res
 
 class NotEqual:
     def __eq__(self, other):

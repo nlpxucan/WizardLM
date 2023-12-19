@@ -5,7 +5,7 @@ import jsonlines
 from fraction import Fraction
 from vllm import LLM, SamplingParams
 import sys
-
+from grader import math_equal
 MAX_INT = sys.maxsize
 
 def is_number(s):
@@ -110,7 +110,7 @@ def gsm8k_test(model, data_path, start=0, end=MAX_INT, batch_size=1, tensor_para
         doc = {'question': prompt}
         y_pred = extract_answer_number(completion)
         if y_pred != None:
-            result.append(float(y_pred) == float(prompt_answer))
+            result.append(float(y_pred) == float(prompt_answer) or math_equal(y_pred, prompt_answer))
         else:
             result.append(False)
             temp = {'question': prompt, 'output': completion, 'answer': prompt_answer}
