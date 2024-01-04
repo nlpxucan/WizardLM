@@ -3,10 +3,14 @@ import pprint
 import sys
 import os
 import re
+import json
 from tqdm import tqdm
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
 from human_eval.data import write_jsonl, read_problems, stream_jsonl
+
+from vllm import LLM
+from vllm import SamplingParams
 
 if torch.cuda.is_available():
     device = "cuda"
@@ -19,12 +23,12 @@ try:
 except:
     pass
 
+
 def generate_prompt(input):
     INSTRUCTION = f"""Below is an instruction that describes a task. Write a response that appropriately completes the request.
 
 
 ### Instruction:
-Create a Python script for this problem:
 {input}
 
 ### Response:"""
@@ -43,7 +47,7 @@ def get_model(
         model = AutoModelForCausalLM.from_pretrained(
             base_model,
             load_in_8bit=load_8bit,
-            torch_dtype=torch.float16,
+            torch_dtype=torch.bfloat16,
             device_map="auto",
         )
     elif device == "mps":
@@ -69,14 +73,15 @@ def main():
 
     parser.add_argument('--model', type=str, default='bigcode/starcoder', help="")
     parser.add_argument('--output_path', type=str, help="")
+    parser.add_argument('--mbpp_path', type=str, help="")
     parser.add_argument('--start_index', type=int, default=0, help="")
     parser.add_argument('--end_index', type=int, default=164, help="")
     parser.add_argument('--temperature', type=float, default=0.8, help="")
     parser.add_argument('--N', type=int, default=200, help="")
     parser.add_argument('--max_len', type=int, default=512, help="")
     parser.add_argument('--decoding_style', type=str, default='sampling', help="")
+    parser.add_argument('--num_gpus', type=int, default=4, help="")
     parser.add_argument('--num_seqs_per_iter', type=int, default=50, help='')
-    parser.add_argument('--greedy_decode', action='store_true', help='')
     parser.add_argument('--overwrite', action='store_true', help='')
 
     args = parser.parse_args()
@@ -84,23 +89,15 @@ def main():
     argsdict = vars(args)
     print(pprint.pformat(argsdict))
 
-    problems = read_problems()
+    problems = json.load(open(args.mbpp_path, "r"))
 
-    task_ids = sorted(problems.keys())[args.start_index: args.end_index]
-    prompts = [problems[task_id]['prompt'] for task_id in task_ids]
+    task_ids = list(problems.keys())[args.start_index: args.end_index]
+    prompts = [problems[task_id] for task_id in task_ids]
     num_samples = len(prompts)
     print("Number of samples: {}".format(num_samples))
 
-    tokenizer, model = get_model(base_model=args.model)
-    generation_config = GenerationConfig(
-        pad_token_id=tokenizer.pad_token_id,
-        do_sample=False if args.greedy_decode else True,
-        temperature=args.temperature,
-        max_length=args.max_len,
-        num_return_sequences=args.num_seqs_per_iter,
-        eos_token_id=tokenizer.eos_token_id,
-        top_p=0.95
-    )
+    llm = LLM(args.model, tensor_parallel_size=args.num_gpus)
+    sampling_params = SamplingParams(temperature=args.temperature, top_p=1, max_tokens=args.max_len)
 
     print(f"Loaded {args.model}.")
     for i in tqdm(range(num_samples), ncols=0, total=num_samples):
@@ -117,8 +114,6 @@ def main():
 
         completion_seqs = []
 
-        encoding = tokenizer(prompt_batch, return_tensors="pt", truncation=True, max_length=args.max_len).to(device)
-
         if args.decoding_style == 'sampling':
             loops = int(args.N / args.num_seqs_per_iter)
         else:
@@ -127,22 +122,15 @@ def main():
         for _ in tqdm(range(loops), total=loops, leave=False, ncols=0):
 
             with torch.no_grad():
-                gen_tokens = model.generate(
-                    **encoding,
-                    generation_config=generation_config
-                )
-
-            if gen_tokens is not None:
-                gen_seqs = tokenizer.batch_decode(gen_tokens, skip_special_tokens=True)
-            else:
-                gen_seqs = None
+                completions = llm.generate(prompt_batch, sampling_params)
+            gen_seqs = [completions[0].outputs[0].text]
 
             if gen_seqs is not None:
                 assert len(ids_batch) == 1
                 task_id = ids_batch[0]
 
                 for seq_idx, gen_seq in enumerate(gen_seqs):
-                    completion_seq = gen_seq.split("### Response:")[1]
+                    completion_seq = gen_seq.split("### Response:")[-1]
                     completion_seq = completion_seq.replace('\t', '    ')
                     all_code = gen_seq.replace('\t', '    ')
 
