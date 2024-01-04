@@ -9,20 +9,29 @@ To develop our WizardCoder model, we begin by adapting the Evol-Instruct method 
 
 ## News
 
-- 🔥🔥🔥[2023/08/26] We released **WizardCoder-Python-34B-V1.0** , which achieves the **73.2 pass@1** and surpasses **GPT4 (2023/03/15)**, **ChatGPT-3.5**, and **Claude2** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+- 🔥🔥🔥[2024/01/04] We released **WizardCoder-33B-V1.1**  trained from deepseek-coder-33b-base, the **SOTA OSS Code LLM** on [EvalPlus Leaderboard](https://evalplus.github.io/leaderboard.html), achieves **79.9 pass@1** on HumanEval, **73.2 pass@1** on HumanEval-Plus, **78.9 pass@1** on MBPP, and **66.9 pass@1** on MBPP-Plus. **WizardCoder-33B-V1.1** outperforms **ChatGPT 3.5**, **Gemini Pro**, and **DeepSeek-Coder-33B-instruct** on HumanEval and HumanEval-Plus pass@1. **WizardCoder-33B-V1.1** is comparable with **ChatGPT 3.5**, and surpasses **Gemini Pro** on MBPP and MBPP-Plus pass@1.
+- [2023/08/26] We released **WizardCoder-Python-34B-V1.0** , which achieves the **73.2 pass@1** and surpasses **GPT4 (2023/03/15)**, **ChatGPT-3.5**, and **Claude2** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
 - [2023/06/16] We released **WizardCoder-15B-V1.0** , which achieves the **57.3 pass@1** and surpasses **Claude-Plus (+6.8)**, **Bard (+15.3)** and **InstructCodeT5+ (+22.3)** on the [HumanEval Benchmarks](https://github.com/openai/human-eval).
+
+❗❗❗**This performance is 100% reproducible!**
 
 ❗Note: There are two HumanEval results of GPT4 and ChatGPT-3.5. The 67.0 and 48.1 are reported by the official GPT4 Report (2023/03/15) of [OpenAI](https://arxiv.org/abs/2303.08774). The 82.0 and 72.5 are tested by ourselves with the latest API (2023/08/26).
 
 
-|  Model  |  Checkpoint  | Paper    | HumanEval  |   MBPP | Demo | License |
-| ----- |------| ---- |------|-------| ----- |  ----- | 
-|  WizardCoder-Python-34B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-Python-34B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  73.2   | 61.2 | [Demo](http://47.103.63.15:50085/) |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama2</a>  |
-|  WizardCoder-15B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  59.8   |50.6 | -- |  <a href="https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement" target="_blank">OpenRAIL-M</a>  |
-|  WizardCoder-Python-13B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-Python-13B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  64.0   | 55.6 | -- |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama2</a>  |
-|  WizardCoder-Python-7B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-Python-7B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  55.5   | 51.6 | [Demo](http://47.103.63.15:50088/) |  <a href="https://ai.meta.com/resources/models-and-libraries/llama-downloads/" target="_blank">Llama2</a>  |
-|  WizardCoder-3B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-3B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  34.8   |37.4 | -- |  <a href="https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement" target="_blank">OpenRAIL-M</a>  |
-|  WizardCoder-1B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-1B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  23.8   |28.6 | -- |  <a href="https://huggingface.co/spaces/bigcode/bigcode-model-license-agreement" target="_blank">OpenRAIL-M</a>  |
+|  Model  |  Checkpoint  | Paper    | HumanEval  |   HumanEval+ | MBPP | MBPP+ |
+| ----- |------| ---- |------|-------| ----- |  ----- |
+|  GPT-4-Turbo (Nov 2023)  | - | - | 85.4  | 81.7 | 83.0 | 70.7 |
+|  GPT-4 (May 2023)  | - | - | 88.4  | 76.8 | - | - |
+|  GPT-3.5-Turbo (Nov 2023)  | - | - | 72.6  | 65.9 | 81.7 | 69.4 |
+|  Gemini Pro  | - | - | 63.4  | 55.5 | 72.9 | 57.9 |
+|  DeepSeek-Coder-33B-instruct | - | - |  78.7 | 72.6 | 78.7 | 66.7 |
+|  WizardCoder-33B-V1.1  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-33B-V1.1" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  79.9  | 73.2 | 78.9 | 66.9 |
+|  WizardCoder-Python-34B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-Python-34B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  73.2   | 64.6 | 73.2 | 59.9 |
+|  WizardCoder-15B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-15B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  59.8   | 52.4 | -- | -- |
+|  WizardCoder-Python-13B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-Python-13B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  64.0   | -- | -- | -- |
+|  WizardCoder-Python-7B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-Python-7B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  55.5   | -- | -- | -- |
+|  WizardCoder-3B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-3B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  34.8   | -- | -- | -- |
+|  WizardCoder-1B-V1.0  |   🤗 <a href="https://huggingface.co/WizardLM/WizardCoder-1B-V1.0" target="_blank">HF Link</a>   |  📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>  |  23.8   | -- | -- | -- |
 
 - &#x1F4E3; Please refer to our Twitter account https://twitter.com/WizardLM_AI and HuggingFace Repo https://huggingface.co/WizardLM . We will use them to announce any new release at the 1st time. 
 
@@ -253,6 +262,169 @@ echo 'Output path: '$output_path
 python process_humaneval.py --path ${output_path} --out_path ${output_path}.jsonl --add_prompt
 
 evaluate_functional_correctness ${output_path}.jsonl
+```
+
+### How to Reproduce the Humaneval(Plus)/MBPP(Plus) Performance of WizardCoder-33B-v1.1?
+
+❗❗❗**This performance is 100% reproducible!**
+
+We also provide all generated results in `WizardLM/WizardCoder/data/humaneval_mbpp_wizardcoder33b_v1.1_results.zip`
+
+```
+transformers==4.36.2
+vllm==0.2.5
+```
+
+(1) HumanEval and HumanEval-Plus
+
+- Step 1
+
+Code Generation (w/o accelerate)
+```bash
+model="WizardLM/WizardCoder-33B-V1.1"
+temp=0.0
+max_len=2048
+pred_num=1
+num_seqs_per_iter=1
+
+output_path=preds/T${temp}_N${pred_num}_WizardCoder-33B-V1.1_Greedy_Decode
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+# 164 problems, 21 per GPU if GPU=8
+index=0
+gpu_num=8
+for ((i = 0; i < $gpu_num; i++)); do
+  start_index=$((i * 21))
+  end_index=$(((i + 1) * 21))
+
+  gpu=$((i))
+  echo 'Running process #' ${i} 'from' $start_index 'to' $end_index 'on GPU' ${gpu}
+  ((index++))
+  (
+    CUDA_VISIBLE_DEVICES=$gpu python humaneval_gen.py --model ${model} \
+      --start_index ${start_index} --end_index ${end_index} --temperature ${temp} \
+      --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --greedy_decode
+  ) &
+  if (($index % $gpu_num == 0)); then wait; fi
+done
+```
+
+Code Generation (w/ vllm accelerate)
+```bash
+model="WizardLM/WizardCoder-33B-V1.1"
+temp=0.0
+max_len=2048
+pred_num=1
+num_seqs_per_iter=1
+
+output_path=preds/T${temp}_N${pred_num}_WizardCoder-33B-V1.1_Greedy_Decode_vllm
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python humaneval_gen_vllm.py --model ${model} \
+    --start_index 0 --end_index 164 --temperature ${temp} \
+    --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --num_gpus 4 --overwrite
+```
+
+- Step 2: Get the score
+
+Install [Eval-Plus](https://github.com/evalplus/evalplus) benchmark.
+```bash
+git clone https://github.com/evalplus/evalplus.git
+cd evalplus
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+pip install -r requirements.txt
+```
+Get HumanEval and HumanEval-Plus scores.
+```bash
+output_path=preds/T0.0_N1_WizardCoder-33B-V1.1_Greedy_Decode
+
+echo 'Output path: '$output_path
+python process_humaneval.py --path ${output_path} --out_path ${output_path}.jsonl --add_prompt
+
+evalplus.evaluate --dataset humaneval --samples ${output_path}.jsonl
+```
+
+(2) MBPP and MBPP-Plus
+
+The preprocessed questions are provided in `WizardLM/WizardCoder/data/mbppplus.json`
+
+- Step 1
+
+Code Generation (w/o accelerate)
+```bash
+model="WizardLM/WizardCoder-33B-V1.1"
+temp=0.0
+max_len=2048
+pred_num=1
+num_seqs_per_iter=1
+
+output_path=preds/MBPP_T${temp}_N${pred_num}_WizardCoder-33B-V1.1_Greedy_Decode
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+# 399 problems, 50 per GPU if GPU=8
+index=0
+gpu_num=8
+for ((i = 0; i < $gpu_num; i++)); do
+  start_index=$((i * 50))
+  end_index=$(((i + 1) * 50))
+
+  gpu=$((i))
+  echo 'Running process #' ${i} 'from' $start_index 'to' $end_index 'on GPU' ${gpu}
+  ((index++))
+  (
+    CUDA_VISIBLE_DEVICES=$gpu python mbppplus_gen.py --model ${model} \
+      --start_index ${start_index} --end_index ${end_index} --temperature ${temp} \
+      --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --mbpp_path "mbppplus.json" --greedy_decode
+  ) &
+  if (($index % $gpu_num == 0)); then wait; fi
+done
+```
+
+Code Generation (w/ vllm accelerate)
+```bash
+model="WizardLM/WizardCoder-33B-V1.1"
+temp=0.0
+max_len=2048
+pred_num=1
+num_seqs_per_iter=1
+
+output_path=preds/MBPP_T${temp}_N${pred_num}_WizardCoder-33B-V1.1_Greedy_Decode_vllm
+
+mkdir -p ${output_path}
+echo 'Output path: '$output_path
+echo 'Model to eval: '$model
+
+CUDA_VISIBLE_DEVICES=0,1,2,3 python mbppplus_gen_vllm.py --model ${model} \
+    --start_index ${start_index} --end_index ${end_index} --temperature ${temp} \
+    --num_seqs_per_iter ${num_seqs_per_iter} --N ${pred_num} --max_len ${max_len} --output_path ${output_path} --mbpp_path "mbppplus.json" --num_gpus 4
+```
+
+- Step 2: Get the score
+
+Install [Eval-Plus](https://github.com/evalplus/evalplus) benchmark.
+```bash
+git clone https://github.com/evalplus/evalplus.git
+cd evalplus
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+pip install -r requirements.txt
+```
+Get HumanEval and HumanEval-Plus scores.
+```bash
+output_path=preds/MBPP_T0.0_N1_WizardCoder-33B-V1.1_Greedy_Decode
+
+echo 'Output path: '$output_path
+python mbppplus_process_preds.py --path ${output_path} --out_path ${output_path}.jsonl --add_prompt
+
+evalplus.evaluate --dataset mbpp --samples ${output_path}.jsonl
 ```
 
 ### How to Reproduce the 73.2 Pass@1 on HumanEval with Greedy Decoding?
