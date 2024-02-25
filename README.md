@@ -5,7 +5,7 @@
 <p align="center">
     
 <p align="center">
-🤗 <a href="https://huggingface.co/WizardLM" target="_blank">HF Repo</a> • 🐦 <a href="https://twitter.com/WizardLM_AI" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.12244" target="_blank">[WizardLM]</a>  • 📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>    • 📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a> <br>
+🤗 <a href="https://huggingface.co/WizardLM" target="_blank">HF Repo</a> • 🐦 <a href="https://twitter.com/WizardLM_AI" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.12244" target="_blank">[WizardLM] @ICLR2024</a>  • 📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder] @ICLR2024</a>    • 📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a> <br>
 </p>
 <p align="center">
     👋 Join our <a href="https://discord.gg/VZjjHtWrKs" target="_blank">Discord</a>
@@ -91,21 +91,25 @@ Thanks to the enthusiastic friends, their video introductions are more lively an
 Please cite the paper if you use the data or code from WizardLM.
 
 ```
-@article{xu2023wizardlm,
-  title={Wizardlm: Empowering large language models to follow complex instructions},
-  author={Xu, Can and Sun, Qingfeng and Zheng, Kai and Geng, Xiubo and Zhao, Pu and Feng, Jiazhan and Tao, Chongyang and Jiang, Daxin},
-  journal={arXiv preprint arXiv:2304.12244},
-  year={2023}
+@inproceedings{
+xu2024wizardlm,
+title={Wizard{LM}: Empowering Large Pre-Trained Language Models to Follow Complex Instructions},
+author={Can Xu and Qingfeng Sun and Kai Zheng and Xiubo Geng and Pu Zhao and Jiazhan Feng and Chongyang Tao and Qingwei Lin and Daxin Jiang},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=CfXh93NDgH}
 }
 ```
 Please cite the paper if you use the data or code from WizardCoder.
 
 ```
-@article{luo2023wizardcoder,
-  title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct},
-  author={Luo, Ziyang and Xu, Can and Zhao, Pu and Sun, Qingfeng and Geng, Xiubo and Hu, Wenxiang and Tao, Chongyang and Ma, Jing and Lin, Qingwei and Jiang, Daxin},
-  journal={arXiv preprint arXiv:2306.08568},
-  year={2023}
+@inproceedings{
+luo2024wizardcoder,
+title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct},
+author={Ziyang Luo and Can Xu and Pu Zhao and Qingfeng Sun and Xiubo Geng and Wenxiang Hu and Chongyang Tao and Jing Ma and Qingwei Lin and Daxin Jiang},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=UnUwSIgK5W}
 }
 ```
 
