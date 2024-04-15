@@ -46,7 +46,7 @@ completion = client.chat.completions.create(
     max_tokens=4096,
     stop=stop_tokens,
     messages=[
-    {'role': 'system', 'content': system_prompt},
+    {"role": "system", "content": system_prompt},
     {"role": "user", "content": "Hello! What is your name?"},
     {"role": "assistant", "content": "I am WizardLM2!"},
     {"role": "user", "content": "Nice to meet you!"},
