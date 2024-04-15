@@ -1,6 +1,6 @@
 
 <p style="font-size:20px;" align="center">
-🏠 <a href="https://wizardlm.github.io/WizardLM2" target="_blank">WizardLM-2 Home Page</a> </p>
+🏠 <a href="https://wizardlm.github.io/WizardLM2" target="_blank">WizardLM-2 Release Blog</a> </p>
 <p align="center">
 🤗 <a href="https://huggingface.co/collections/microsoft/wizardlm-661d403f71e6c8257dbd598a" target="_blank">HF Repo</a>  •🐱 <a href="https://github.com/nlpxucan/WizardLM" target="_blank">Github Repo</a>  • 🐦 <a href="https://twitter.com/WizardLM_AI" target="_blank">Twitter</a> • 📃 <a href="https://arxiv.org/abs/2304.12244" target="_blank">[WizardLM]</a>  • 📃 <a href="https://arxiv.org/abs/2306.08568" target="_blank">[WizardCoder]</a>   • 📃 <a href="https://arxiv.org/abs/2308.09583" target="_blank">[WizardMath]</a>  <br>
 </p>
