@@ -1,5 +1,65 @@
 
-## WizardLM Inference Demo
+## Choice-1: API Server
+The OpenAI-compatible APIs are provided by vLLM. We advise you to use vLLM=0.2.1.post1 to build OpenAI-compatible API service. 
+
+### Environment
+
+```
+conda create -n myenv python=3.8 -y
+source activate myenv
+pip install vllm==0.2.1.post1
+pip install openai==1.17.1
+pip install accelerate
+pip install fschat
+```
+
+### Server
+
+vLLM provides an HTTP server that implements OpenAI’s Completions and Chat API. To deploy the server, you need to use the following command: 
+
+```
+### for 7B model, maybe use 1 gpu
+CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server --model xxxx/wizard_model_path --dtype float16 --tensor-parallel-size 1 --ip your_IP --port your_PORT --trust-remote-code --max-model-len 24000
+```
+
+```
+### for 70B model, maybe use 8 gpus
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 python -m vllm.entrypoints.openai.api_server --model xxxx/wizard_model_path --dtype float16 --tensor-parallel-size 8 --ip your_IP --port your_PORT --trust-remote-code --max-model-len 24000
+```
+
+#### API Inference
+```
+from openai import OpenAI
+
+API_URL = "http://ip:port/v1"
+model_path = "xxxx/wizard_model_path"
+client = OpenAI(
+    base_url=API_URL,
+    api_key="EMPTY",
+)
+
+stop_tokens = []
+completion = client.chat.completions.create(
+    model=model_path,
+    temperature=0,
+    top_p=1,
+    max_tokens=4096,
+    stop=stop_tokens,
+    messages=[
+    {"role": "user", "content": "Hello! What is your name?"},
+    {"role": "assistant", "content": "I am WizardLM2!"},
+    {"role": "user", "content": "Nice to meet you!"},
+  ]
+)
+
+print(completion.choices[0].message.content)
+
+```
+
+If you want to learn more about the deployment process and parameter settings, please refer to the [vLLM_API_Server](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) official documentation 
+
+
+## Choice-2: WizardLM Inference Demo
 
 We provide the inference demo script for **WizardLM-Family**.
 
@@ -17,7 +77,7 @@ CUDA_VISIBLE_DEVICES=0 python wizardLM_demo.py \
 ```
 
 
-## WizardCoder Inference Demo
+## Choice-2: WizardCoder Inference Demo
 
 We provide the inference demo script for **WizardCoder-Family**.
 
@@ -37,7 +97,7 @@ CUDA_VISIBLE_DEVICES=1,2,3,4 python wizardcoder_demo.py \
 Note: This script supports `WizardLM/WizardCoder-Python-34B/13B/7B-V1.0`. If you want to inference with `WizardLM/WizardCoder-15B/3B/1B-V1.0`, please change the `stop_tokens = ['</s>']` to `stop_tokens = ['<|endoftext|>']` in the script.
 
 
-## WizardMath Inference Demo
+## Choice-2: WizardMath Inference Demo
 
 We provide the inference demo script for **WizardMath-Family**.
 
