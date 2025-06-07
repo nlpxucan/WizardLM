@@ -116,11 +116,28 @@ url={https://openreview.net/forum?id=UnUwSIgK5W}
 Please cite the paper if you refer to our model or code or data or paper from WizardMath.
 
 ```
-@article{luo2023wizardmath,
-  title={WizardMath: Empowering Mathematical Reasoning for Large Language Models via Reinforced Evol-Instruct},
-  author={Luo, Haipeng and Sun, Qingfeng and Xu, Can and Zhao, Pu and Lou, Jianguang and Tao, Chongyang and Geng, Xiubo and Lin, Qingwei and Chen, Shifeng and Zhang, Dongmei},
-  journal={arXiv preprint arXiv:2308.09583},
-  year={2023}
+@inproceedings{DBLP:conf/iclr/LuoSX0LTGLCT025,
+  author       = {Haipeng Luo and
+                  Qingfeng Sun and
+                  Can Xu and
+                  Pu Zhao and
+                  Jian{-}Guang Lou and
+                  Chongyang Tao and
+                  Xiubo Geng and
+                  Qingwei Lin and
+                  Shifeng Chen and
+                  Yansong Tang and
+                  Dongmei Zhang},
+  title        = {WizardMath: Empowering Mathematical Reasoning for Large Language Models
+                  via Reinforced Evol-Instruct},
+  booktitle    = {The Thirteenth International Conference on Learning Representations,
+                  {ICLR} 2025, Singapore, April 24-28, 2025},
+  publisher    = {OpenReview.net},
+  year         = {2025},
+  url          = {https://openreview.net/forum?id=mMPMHWOdOy},
+  timestamp    = {Thu, 15 May 2025 17:19:05 +0200},
+  biburl       = {https://dblp.org/rec/conf/iclr/LuoSX0LTGLCT025.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 ```
 
