@@ -589,11 +589,13 @@ Acknowledgement: The evaluation code `humaneval_gen.py`, `mbpp_gen.py` and bash 
 Please cite the repo if you use the data or code in this repo.
 
 ```
-@article{luo2023wizardcoder,
-  title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct},
-  author={Luo, Ziyang and Xu, Can and Zhao, Pu and Sun, Qingfeng and Geng, Xiubo and Hu, Wenxiang and Tao, Chongyang and Ma, Jing and Lin, Qingwei and Jiang, Daxin},
-  journal={arXiv preprint arXiv:2306.08568},
-  year={2023}
+@inproceedings{
+luo2024wizardcoder,
+title={WizardCoder: Empowering Code Large Language Models with Evol-Instruct},
+author={Ziyang Luo and Can Xu and Pu Zhao and Qingfeng Sun and Xiubo Geng and Wenxiang Hu and Chongyang Tao and Jing Ma and Qingwei Lin and Daxin Jiang},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=UnUwSIgK5W}
 }
 ```
 ## Disclaimer
